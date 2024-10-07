@@ -1,319 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wezlon</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <!-- Navbar -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar Section -->
 
-    <div class="navbar">
-        <div class="logo">
-            <img class="logo-img" src="./images/wez-logo.png" alt="">
-        </div>
-       <div class="nav">
-        <ul class="nav-list">
-            <li>Home</li>
-            <li class="dropdown">
-                <a href="#" >Courses</a>
-                <div class="dropdown-content">
-                    <a href="#"></a>
-                    
-                </div>
+    <!-- As a link -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <div class="logo">
+            <img class="logo-img" src="./images/wez-logo.png" alt="" />
+          </div>
+          <div class="navbar-nav me-auto align-middle"></div>
+          <ul
+            class="navbar-nav me-auto mb-5 mb-lg-0 text-center"
+            style="gap: 60px; font-size: 20px"
+          >
+            <li class="nav-item me-auto mb-2 mb-lg-0" >
+              <a class="nav-link link-danger" aria-current="page" href="#"
+                >Home</a
+              >
             </li>
-            <li>Blog</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <button class="nav-btn">Enroll now</button>
-        </ul>
-      
-       </div>
-       
-      
-    </div>
+            <li class="nav-item me-auto mb-2 mb-lg-0">
+              <a class="nav-link link-danger" href="#">
+                Courses</a>
+            </li>
+            <li class="nav-item me-auto mb-2 mb-lg-0">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item me-auto mb-2 mb-lg-0">
+              <a class="nav-link link-danger" href="#">About Us</a>
+            </li>
 
-   <!-- Banner -->
-
-   <!-- <div class="main-banner">
-    <div class="banner-text">
-        <h1>Lorem ipsum dolor</h1>
-        <h2>Sit amet dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br>
-        Vivamus lacinia odio vitae vestibulum. Curbitur vitae <br>
-    arcu id ligula suscipit aliquet. Nullam a orci non lorem <br>
-faucibus venenatis. Suspendisse potenti, ef viverra est <br>
-condimentum.</p>
-    </div>
-    <img class="ban-img" src="./images/banner-img.png" alt="">
-   </div> -->
-
-   <!-- Satisfaction Bar -->
-
-   <!-- <div class="satisfaction">
-   <div class="satisfaction-list">
-    <div class="students">
-        <h1>150+</h1>
-        <p>Students</p>
-    </div>
-    <div class="placements">
-        <h1>32+</h1>
-        <p>Placements</p>
-    </div>
-    <div class="placement">
-        <h1>32+</h1>
-        <p>Placements</p>
-    </div>
-    <div class="students">
-        <h1>99%</h1>
-        <p>Satisfaction</p>
-    </div>
-   </div>
-   </div> -->
-
-   <!-- Courses -->
-
-   <!-- <div class="courses">
-    <div>
-        <button class="course-btn">Courses</button>
-        <h3>Select the domain of your choice</h3>
-    </div>
-   <div class="course-section">
-    <div class="course-container">
-        <div class="course">
-            <img src="./images/mern.png" alt="">
-            <div class="course-text">
-                <h3>MERN Stack Development</h3>
-                <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                 Vivamus lacinia odio vitae vestibulum. Curbitur vitae </p>
-            </div>
-            <img src="./images/arrow.png" alt="">
-        </div>
-        <div class="course">
-            <img src="./images/flutter.png" alt="">
-            <div class="course-text">
-                <h3>Flutter App Development</h3>
-                <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                 Vivamus lacinia odio vitae vestibulum.Curbitur vitae </p>
-            </div>
-            <img src="./images/arrow.png" alt="">
-        </div>
-        
-        
-
-    </div>
-    <div class="course-container">
-        <div class="course">
-            <img src="./images/ui ux.png" alt="">
-            <div class="course-text">
-                <h3>UI UX Design</h3>
-                <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                 Vivamus lacinia odio vitae vestibulum. Curbitur vitae </p>
-            </div>
-            <img src="./images/arrow.png" alt="">
-        </div>
-        <div class="course">
-            <img src="./images/dm.png" alt="">
-            <div class="course-text">
-                <h3>Digital Marketing</h3>
-                <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                 Vivamus lacinia odio vitae vestibulum. Curbitur vitae </p>
-            </div>
-            <img src="./images/arrow.png" alt="">
-        </div>
-        
-        
-
-    </div>
-    <div class="course-container">
-        <div class="course">
-            <img src="./images/python.png" alt="">
-            <div class="course-text">
-                <h3>Python</h3>
-                <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                 Vivamus lacinia odio vitae vestibulum. Curbitur vitae </p>
-            </div>
-            <img src="./images/arrow.png" alt="">
-        </div>
-        <div class="course">
-            <img src="./images/devops.png" alt="">
-            <div class="course-text">
-                <h3>DevOps</h3>
-                <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                 Vivamus lacinia odio vitae vestibulum. Curbitur vitae </p>
-            </div>
-            <img src="./images/arrow.png" alt="">
-        </div>
-        
-        
-
-    </div>
-   </div>
-
-   </div> -->
-
-   <!-- Testimonial section -->
-
-   <!-- <div class="testimony-section">
-    <div class="testimonial">
-        <div class="testimony">
-            <div class="testi-text">
-                <button class="testimonial-btn">Testimonial</button>
-            <h3>Hear from our students</h3>
-            </div>
-            
-                <img src="./images/whitearrow.png" alt="">
-                <img src="./images/redarrow.png" alt="">
-        
-        </div>
-        
-       </div>
-       <div class="people-testimony">
-        <div class="test-sec">
-            <div class="people-img">
-                <img src="./images//people1.png" alt="">
-               <div class="img-text">
-                <p>Lorem ipsum dolor sit amet. <br>
-                    consectetur adipiscing elit. <br>
-                Vivamus lacinia odio vitae <br>
-            Vestibulum.Curabitur vitae <br>
-            Vivamus lacinia odio vitae <br>
-            Vestibulum. Curabitur vitae</p>
-               </div>
-            <img src="./images/people2.png" alt="">
-            <div class="img-text">
-                <p>Lorem ipsum dolor sit amet. <br>
-                    consectetur adipiscing elit. <br>
-                Vivamus lacinia odio vitae <br>
-            Vestibulum.Curabitur vitae <br>
-            Vivamus lacinia odio vitae <br>
-            Vestibulum. Curabitur vitae</p>
-               </div>
-            </div>
-        </div>
-        
-       </div>
-   </div> -->
-<!-- hiring Section -->
-
-   <!-- <div class="hiring-section">
-    <div class="hire-wezlon">
-        <img src="./images/hireimg.png" alt="">
-        <div class="hire-text">
-            <h1>Hire from <span>Wezlon ?</span></h1>
-            <p>Are you interested in accessing the exceptional talent pool of Wezlon students renowned for <br>
-            their brilliance and innovation? Reach out to us today to explore this exciting opportunity <br>further</p>
-        
-            <button>Contact us now</button>
-        </div>
-    </div>
-   
-   </div> -->
-   <!-- Footer-Section -->
-
-
-   <div class="footer-section">
-    <div class="footer-container">
-     <div class="footer">
-        <div class="footer-wezlon">
-            <img src="./images/wez-logo.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br>
-            Vivamus lacinia odio vitae vestibulum. Curabitur vitae at <br>
-        Vivamus lacinia odio vitae vestibulum. Cirabotir vitae</p>
-        <button>Enroll now</button>
-        </div>
-        <div class="footer-links">
-            <h5>Links</h5>
-           <ul>
-            <li>About us</li>
-            <li>Contact us</li>
-            <li>Blog</li>
-           </ul>
-        </div>
-        <div class="footer-courses">
-            <h5>Courses</h5>
-            <ul>
-                <li>MERN Stack Development</li>
-                <li>Flutter App Development</li>
-                <li>UI UX Development</li>
-              </ul>
-        </div>
-        <div class="footer-course">
-          <ul>
-            <li>MERN Stack Development</li>
-            <li>Flutter App Development</li>
-            <li>UI UX Development</li>
+            <li class="nav-item me-auto mb-2 mb-lg-0">
+              <a class="nav-link link-danger" href="#">Contact Us</a>
+            </li>
           </ul>
+
+          <button
+            class="btn btn-danger"
+            style="width: 125px;
+            height: 48px;
+            padding: 10px;
+            border-radius: 12px;
+            opacity: 0px;
+            background:linear-gradient(236.46deg, #FF1616 -0.8%, #7C0A0A 220.92%)"
+            type="submit"
+          >
+            Enroll Now
+          </button>
         </div>
-        <div class="footer-contactus">
-            <h5>Contact us</h5>
-           <div class="contact-details">
-            <div class="call">
-                <img src="./images/call.png" alt="">
-                <p>+91 8138830876</p>
+      </div>
+    </nav>
+    <!-- navbar ending -->
+
+    <!-- banner section started -->
+
+    <div class="main-banner container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="banner-text">
+                    <h1>Kerala's First & </h1>
+                    <h2>Largest IT Job Training Academy</h2>
+                   <p>
+                    At Wezlon, we believe in transforming dreams into reality. <br>
+                     We know the power of technology and how mastering it can change your life. <br>
+                      That’s why we are dedicated to empowering aspiring IT professionals with the knowledge, <br>
+                       skills, and tools needed to not just survive but thrive in today’s competitive IT world.
+                    </p>
+                </div>
             </div>
-            <div class="mail">
-                <img src="./images/message.png" alt="">
-                <p>info@wezlon.com</p>
+            <div class="col-lg-6 col-md-12 text-center">
+                <img class="ban-img img-fluid" src="./images/banner-img.png" alt="">
             </div>
-            <div class="location">
-                <img src="./images/location.png" alt="">
-                <p>7th Floor <br>
-                Hilite Business Park <br>
-            Calicut - 673617</p>
-            </div>
-           </div>
-        </div>
-        
-       
-     </div>
-     <div class="copyright">
-        <p>Copyright@2024 Wezlon</p>
-        <div class="footer-logos">
-            <img src="./images/fb.png" alt="">
-        <img src="./images/insta.png" alt="">
-        <img src="./images/location-icon.png" alt="">
         </div>
     </div>
     
+    <!-- banner section end -->
+
+    <!-- achievment section -->
+    <div class="achievement">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="achievement-item">
+                    <h1>150+</h1>
+                    <p>Students</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="achievement-item">
+                    <h1>32+</h1>
+                    <p>Placements</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="achievement-item">
+                    <h1>32+</h1>
+                    <p>Placements</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="achievement-item">
+                    <h1>99%</h1>
+                    <p>Satisfaction</p>
+                </div>
+            </div>
+        </div>
     </div>
-   </div>
-   <div class="ending">
+    <!-- achievment section end -->
 
+    <!-- Road-map section start -->
+
+    <!-- <div class="container">
+
+      <div class="my-4">
+        <button class="btn btn-outline-danger course-btn">Courses</button>
+        <h3 style=" font-size: 30px; margin-top: 15px;">Select the domain of your choice</h3>
+    </div>
+    <div class="road-map">
+     <div class="roadmap-contents" style="display: flex;">
+      <div class="imgs" style="display: flex;">
+        <img src="./images/signal.png" alt="">
+      <img src="./images/cycle.png" alt="">
+      <img style="justify-content: end; align-items: fle;" src="./images/birds.png" alt="">
+      </div>
+
+
+     </div>
+
+    </div>
+    </div> -->
+
+    <!-- Road-map section end -->
+
+     <!-- providing courses -->
+      <div class="container courses">
+        <div class="my-4">
+            <button class="btn btn-outline-danger course-btn">Courses</button>
+            <h3>Select the domain of your choice</h3>
+        </div>
+        
+        <div class="course-section">
+            <div class="row course-container">
+                <div class="col-lg-6 col-md-12 mt-12 course-container1">
+                    <div class="course d-flex p-3 shadow-lg">
+                        <img src="./images/mern.png" alt="">
+                        <div class="course-text ms-3">
+                            <h3>MERN Stack Development</h3>
+                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
+                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
+                        </div>
+                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-12 mt-12 course-container1">
+                    <div class="course d-flex p-3 shadow-lg mt-12">
+                        <img src="./images/flutter.png" alt="" class="img-fluid">
+                        <div class="course-text ms-3">
+                            <h3>Flutter App Development</h3>
+                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
+                            Vivamus lacinia odio vitae vestibulum.Curbitur vitae</p>
+                        </div>
+                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto"> 
+                    </div>
+                </div> 
+    
+                <div class="col-lg-6 col-md-12 mt-12 course-container1">
+                    <div class="course d-flex p-3 shadow-lg mt-12">
+                        <img src="./images/ui ux.png" alt="" class="img-fluid">
+                        <div class="course-text ms-3">
+                            <h3>UI UX Design</h3>
+                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
+                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
+                        </div>
+                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-12 mb-12 course-container1">
+                    <div class="course d-flex p-3 shadow-md mt-12">
+                        <img src="./images/dm.png" alt="" class="img-fluid">
+                        <div class="course-text ms-3">
+                            <h3>Digital Marketing</h3>
+                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
+                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
+                        </div>
+                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-12 mb-12 course-container1">
+                    <div class="course d-flex p-3 shadow-lg mt-12">
+                        <img src="./images/python.png" alt="" class="img-fluid">
+                        <div class="course-text ms-3">
+                            <h3>Python</h3>
+                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
+                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
+                        </div>
+                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-12 mb-12 course-container1">
+                    <div class="course d-flex p-3 shadow-lg mt-12">
+                        <img src="./images/devops.png" alt="" class="img-fluid">
+                        <div class="course-text ms-3">
+                            <h3>DevOps</h3>
+                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
+                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
+                        </div>
+                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Section start -->
+
+   
+   <div class="container testimonial">
+    <div class="my-4">
+      <button class="btn btn-outline-danger course-btn">Courses</button>
+      <h3 style="    font-size: 30px;
+      margin-top: 15px;
+  ">Select the domain of your choice</h3>
+
+  </div>
+
+  <div style="display: flex; justify-content: space-between; gap: 8px; margin-top: 130px;" class="col-md-auto container-fluid">
+  <div class="mainBox" style="height: 332px; border-radius: 32px; background-color: rgba(239, 239, 239, 1); padding: 8px; display: flex; justify-content: flex-end; position: relative; width: 100%;">
+    <div class="imgBox" style="position: absolute; left: 8px; top: -68px;" >
+      <img class="" src="./images/people2.png" alt="" height="402">
+    </div>
+
+    <div class=" tectBox" style="width: 315px; border-radius: 25px; background-color: white; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Curabitur vitae</p>  
+      <hr style="color: rgba(217, 217, 217, 1);">
+      <h3>Warren Anderson</h3>
+      <p>MERN Stack Development</p>
+    </div>
+  </div>
+  <div class="mainBox" style="height: 332px; border-radius: 32px; background-color: rgba(239, 239, 239, 1); padding: 8px; display: flex; justify-content: flex-end; position: relative; width: 100%;">
+    <div class="imgBox" style="position: absolute; left: 8px; top: -68px;" >
+      <img class="" src="./images/people2.png" alt="" height="402">
+    </div>
+
+    <div class="tectBox" style="width: 315px; border-radius: 25px; background-color: white; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Curabitur vitae</p>  
+      <hr style="color: rgba(217, 217, 217, 1);">
+      <h5>Warren Anderson</h5>
+      <p>MERN Stack Development</p>
+    </div>
+  </div>
+</div>
    </div>
 
-   <!-- Forms -->
+   
+
+
+  <!-- Card Section -->
 
   
-<!-- </div>
-<div class="floating-form">
-    <div class="form-sections">
-        <div class="form-desc">
 
+
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="footer container my-5">
+  <!-- Footer -->
+  <footer
+          class="text-center ml-5 text-lg-start "
+          
+          >
+    <!-- Grid container --> 
+    <div class="container p-4 pb-0 shadow-lg">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row rounded-lg">
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mt-3 ">
+            <!-- <h6 class="text-uppercase mb-4 font-weight-bold">
+              Company name
+            </h6> -->
+            <img src="./images/wez-logo.png" alt="">
+            <p class="mt-5">
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
+            <p>
+              About us
+            </p>
+            <p>
+              Contact us
+            </p>
+            <p>
+              Blog
+            </p>
+           
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+             Courses
+            </h6>
+            
+            <p>
+              Mern Stack Development
+            </p>
+            <p>
+              Flutter App Development
+            </p>
+            <p>
+              UI UX Design
+            </p>
+          </div>
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+           <!-- Grid column -->
+           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-5">
+            <!-- <h6 class="text-uppercase mb-4 font-weight-bold">
+              Useful links
+            </h6> -->
+            <p>
+              Digital Marketing
+            </p>
+            <p>
+              Python
+            </p>
+            <p>
+              DevOps
+            </p>
+           
+          </div>
+
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact us</h6>
+            <p><i class="fas fa-phone mr-3"></i> +91 8138830876</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@wezlon.com</p>
+            <p><i class="fas fa-home mr-3"></i>7th Floor <br>
+            Hi-Lite Business Park <br> Calicut-673617</p>
+          </div>
+          <!-- Grid column -->
         </div>
-        <div class="form-container" id="form-container">
-            <form>
-                <h2>Contact Us</h2>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="number">Phone Number:</label>
-                <input type="number" id="number" name="number" required><br><br>
-                <button type="submit">Submit</button>
-            </form>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="my-3">
+
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="copyright d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3 text-white" >
+              Copyright@2024 Wezlon <a class="text-white" href="/privacypolicy.html">Privacy Policy</a>
+              <!-- <a class="text-white" href="https://mdbootstrap.com/"
+                 >MDBootstrap.com</a
+                > -->
+               
+            </div>
+            
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center p-3 text-md-end">
+            <!-- Facebook -->
+           <img  class=" btn-floating m-1" src="./images/fb.png" alt="">
+
+            <!-- Instagram -->
+            <img  class=" btn-floating m-1" src="./images/insta.png" alt="">
+            <!-- Linkedin -->
+           <img src="./images/linkedin.png" alt="">
+
+            
+           
+          </div>
+          <!-- Grid column -->
+        </div>
+      </section>
+      <!-- Section: Copyright -->
     </div>
-</div> -->
-
-<div id="root"></div>
-
-<script src="script.js">
+    <!-- Grid container -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+   
     
-</script>
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
