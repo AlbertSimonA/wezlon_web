@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wezlon</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7C0A0A",
+              secondary: "#FF1616",
+              paraColor: "#000000",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="py-4 px-2 shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] fixed bg-[white] w-full">
+      <div class="flex justify-between">
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="./images/wez-logo.png"
+            alt=""
+            width="185"
+          />
+        </div>
+
+        <div class="flex gap-3">
+          <button class="bg-secondary rounded-md px-2 text-white text-sm">
+            Enroll now
+          </button>
+          <div class="menu-btn-1" onclick="menuBtnFunction(this)">
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-nav"
+        class="mobile-nav absolute right-0 bottom-0 h-full top-[64px] w-[265px]"
+        style="height: calc(100vh - 64px)"
+        hidden
+      >
+        <nav
+          class="bg-secondary h-full shadow-[rgba(51,10,10,1)_-8px_0px_29px_-10px]"
+        >
+          <ol class="flex direction flex-col gap-3 pt-4">
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/course.html"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href=""
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ol>
+
+          <div
+            class="flex flex-row-reverse absolute bottom-0 right-0 p-3 gap-2"
+          >
+            <img class="btn-floating m-1" src="./images/fb.png" alt="" />
+            <img class="btn-floating m-1" src="./images/insta.png" alt="" />
+            <img src="./images/linkedin.png" alt="" />
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- banner section started -->
+    <section class="mb-12 pt-[98px]">
+      <div class="mb-10">
+        <div class="mb-6">
+          <h1 class="text-5xl text-center font-extrabold">
+            Kerala's First <br />
+            &
+          </h1>
+          <h2 class="text-4xl text-center font-extrabold text-secondary mb-4">
+            Largest IT Job Training Academy
+          </h2>
+          <p class="text-base text-center text-paraColor font-light px-2">
+            At Wezlon, we believe in transforming dreams into reality. We know
+            the power of technology and how mastering it can change your life.
+            That’s why we are dedicated to empowering aspiring IT professionals
+            with the knowledge, skills, and tools needed to not just survive but
+            thrive in today’s competitive IT world.
+          </p>
+        </div>
+
+        <div class="px-4">
+          <img class="ban-img img-fluid" src="./images/banner-img.png" alt="" />
+        </div>
+      </div>
+
+      <!-- achievment section -->
+      <div class="bg-secondary p-4 shadow-[rgba(255,0,0,1)_0px_35px_101px_-28px]">
+        <div class="grid grid-cols-2 gap-y-4 text-center text-white">
+          <div>
+            <h1 class="text-xl font-bold">150+</h1>
+            <p>Students</p>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold">32+</h1>
+            <p>Placements</p>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold">32+</h1>
+            <p>Placements</p>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold">99%</h1>
+            <p>Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- banner section end -->
+
+    <section class="px-4 mb-14">
+        <div class="container courses">
+            <div class="my-4">
+                <button class="px-4 py-2 mb-4 text-secondary rounded-full border border-secondary cursor-auto">Roadmap</button>
+                <h3 class="text-xl font-bold">Course progression and key milestones</h3>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div class="flex justify-between items-center gap-4 w-full">
+                <div class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0">
+                  <div class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary">1</div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="text-secondary text-xl font-extrabold">Title</h4>
+                  <p class="text-sm">Lorem quia magni reprehenderit officiis molestias, doloribus reiciendis natus.</p>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center gap-4 w-full">
+                <div class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0">
+                  <div class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary">2</div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="text-secondary text-xl font-extrabold">Title</h4>
+                  <p class="text-sm">Lorem quia magni reprehenderit officiis molestias, doloribus reiciendis natus.</p>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center gap-4 w-full">
+                <div class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0">
+                  <div class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary">3</div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="text-secondary text-xl font-extrabold">Title</h4>
+                  <p class="text-sm">Lorem quia magni reprehenderit officiis molestias, doloribus reiciendis natus.</p>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center gap-4 w-full">
+                <div class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0">
+                  <div class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary">4</div>
+                </div>
+                <div class="flex-grow">
+                  <h4 class="text-secondary text-xl font-extrabold">Title</h4>
+                  <p class="text-sm">Lorem quia magni reprehenderit officiis molestias, doloribus reiciendis natus.</p>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4">
+      <div class="container courses">
+          <div class="my-4">
+              <button class="px-4 py-2 mb-4 text-secondary rounded-full border border-secondary cursor-auto">Courses</button>
+              <h3 class="text-xl font-bold"> Select the domain of your choice </h3>
+
+          </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
