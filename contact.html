@@ -30,47 +30,87 @@
     />
   </head>
   <body>
+    <header>
+      <div class="flex items-center justify-center gap-48 py-5">
+        <div>
+          <img src="./images/wez-logo.png" alt="" class="w-40" />
+        </div>
+        <nav>
+          <ol class="flex gap-10">
+            <a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Home</li> </a
+            ><a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Cources</li> </a
+            ><a class="navHover" href="/blog">
+              <li class="font-bold hover:text-secondary">Blog</li> </a
+            ><a class="navHover" href="/about.html">
+              <li class="font-bold hover:text-secondary">About</li> </a
+            ><a class="navHover" href="/contact.html">
+              <li class="font-bold hover:text-secondary">Contact Us</li>
+            </a>
+          </ol>
+        </nav>
+        <button class="wezgrade text-[white] p-3 px-6 rounded-lg text-sm">
+          Enroll now
+        </button>
+      </div>
+    </header>
+
     <section class="relative">
       <div class="h-[480px] contactHero"></div>
       <div
-        class="flex shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] absolute top-[100%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[999px] rounded-2xl"
+        class="flex shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] absolute top-[100%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[1014px] rounded-3xl"
       >
         <!-- First Section -->
         <div class="bg-[#F2F4F8] p-8 w-[50%] rounded-l-2xl">
-          <h3 class="text-2xl">Contact us</h3>
-          <p class="mb-6">
+          <h3 class="font-extrabold text-3xl mb-4">Contact us</h3>
+          <p class="mb-6 text-slate-600 text-sm">
             Wezlon is ready to provide the right solution according to your
             needs.
           </p>
 
-          <div class="flex flex-col gap-4 mb-4">
-            <div class="flex">
+          <div class="flex flex-col gap-4 mb-6">
+            <div class="flex gap-4 items-center">
               <div class="logo">
-                <img src="" alt="" />
+                <img
+                  src="./images//locationRed.png"
+                  alt=""
+                  class="h-[42px] w-[42px]"
+                />
               </div>
               <div>
-                <h6>Head Office</h6>
-                <p>4th Floor, Hi-lite Business Park, Calicut : 673018</p>
+                <h6 class="font-bold">Head Office</h6>
+                <p class="text-slate-600 text-sm">
+                  4th Floor, Hi-lite Business Park, Calicut : 673018
+                </p>
               </div>
             </div>
 
-            <div class="flex">
+            <div class="flex gap-4 items-center">
               <div class="logo">
-                <img src="" alt="" />
+                <img
+                  src="./images/mailRed.png"
+                  alt=""
+                  class="h-[42px] w-[42px]"
+                />
               </div>
               <div>
-                <h6>Email us</h6>
-                <p>info@wezlon.com</p>
+                <h6 class="font-bold">Email us</h6>
+                <p class="text-slate-600 text-sm">info@wezlon.com</p>
               </div>
             </div>
 
-            <div class="flex">
+            <div class="flex gap-4 items-center">
               <div class="logo">
-                <img src="" alt="" />
+                <img
+                  src="./images/phonred.png"
+                  alt=""
+                  class="h-[42px] w-[42px]"
+                />
               </div>
               <div>
-                <h6>Call us</h6>
-                <p>+91 0898989898</p>
+                <h6 class="font-bold">Call us</h6>
+                <p class="text-slate-600 text-sm">+91 0898989898</p>
               </div>
             </div>
           </div>
@@ -78,55 +118,78 @@
           <hr class="mb-6" />
 
           <div>
-            <h6>Follow us on social media</h6>
-            <div class="flex">
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
+            <h6 class="font-bold mb-3">Follow us on social media</h6>
+            <div class="flex gap-3">
+              <a href="/">
+                <img
+                  class="w-[34px] h-[34px]"
+                  src="./images/faceBookRed.png"
+                  alt=""
+              /></a>
+              <a href="/"
+                ><img
+                  class="w-[34px] h-[34px]"
+                  src="./images/instaRed.png"
+                  alt=""
+              /></a>
+              <a href="/"
+                ><img
+                  class="w-[34px] h-[34px]"
+                  src="./images/linkinRed.png"
+                  alt=""
+              /></a>
             </div>
           </div>
         </div>
 
         <!-- Second Section -->
         <div class="p-8 w-[50%] bg-[white] rounded-r-2xl">
-          <h2>Send us a message</h2>
+          <h2 class="font-extrabold text-3xl mb-4">Send us a message</h2>
           <form action="" class="flex flex-col gap-3">
             <div class="flex gap-4">
-              <div class="flex flex-col gap-2">
-                <label for="name">Name</label>
+              <div class="w-full">
+                <label class="block mb-2 text-sm text-slate-600"> Name </label>
                 <input
                   type="text"
                   id="name"
-                  class="p-2 bg-[white] border border-[#0000001C] rounded-md w-full"
+                  class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                  placeholder="Type here..."
                 />
               </div>
-              <div class="flex flex-col gap-2">
-                <label for="email">Email</label>
+              <div class="w-full">
+                <label class="block mb-2 text-sm text-slate-600"> Email </label>
                 <input
                   type="text"
                   id="email"
-                  class="p-2 bg-[white] border border-[#0000001C] rounded-md w-full"
+                  class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                  placeholder="example@email.com..."
                 />
               </div>
             </div>
 
             <div class="flex flex-col gap-2">
-              <label for="subject">Subject</label>
+              <label for="subject" class="block text-sm text-slate-600"
+                >Subject</label
+              >
               <input
                 type="text"
                 id="subject"
-                class="p-2 bg-[white] border border-[#0000001C] rounded-md"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
               />
             </div>
 
             <div class="flex flex-col gap-2">
-              <label for="message">Message</label>
+              <label for="message" class="block text-sm text-slate-600"
+                >Message</label
+              >
               <textarea
                 type="text"
                 id="message"
                 rows="4"
                 cols="40"
-                class="p-2 bg-[white] border border-[#0000001C] rounded-md"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
               ></textarea>
             </div>
 
@@ -139,7 +202,7 @@
 
     <!-- Location with google map -->
     <section>
-      <div style="width: 100%; height: 400px">
+      <div style="width: 100%; height: 500px">
         <iframe
           width="100%"
           height="100%"
@@ -155,91 +218,116 @@
     </section>
 
     <footer class="relative">
-      <div class="footerdiv wezboxShadow rounded-2xl p-6 w-[1260px] bg-[white] absolute top-[100%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
-        <div class="grid grid-cols-5 grid-rows-2  mb-6">
-          <div class="row-span-1 h-1/4">
-            <img src="./images/wez-logo.png" alt="" />
+      <div
+        class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] pb-11"
+      >
+        <div
+          class="footerdiv wezboxShadow rounded-3xl p-11 w-[1260px] bg-[white]"
+        >
+          <div class="grid grid-cols-[30%_10%_16%_10%_20%] gap-10 mb-6">
+            <div class="">
+              <img src="./images/wez-logo.png" alt="" class="mb-6" />
+
+              <p class="mb-4 font-light text-slate-500 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae at Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae
+              </p>
+
+              <button
+                class="border-2 border-[#FF1616] rounded-md p-5 py-2 text-secondary"
+              >
+                Enroll now
+              </button>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-9">Links</p>
+
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">About us</li>
+                <li class="font-light text-slate-500 text-sm">Contact us</li>
+                <li class="font-light text-slate-500 text-sm">Blog</li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-9">Courses</p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">
+                  MERN Stack Development
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  Flutter App Development
+                </li>
+                <li class="font-light text-slate-500 text-sm">UI UX Design</li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-16"></p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">
+                  Digital Marketing
+                </li>
+                <li class="font-light text-slate-500 text-sm">Python</li>
+                <li class="font-light text-slate-500 text-sm">DevOps</li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-9">
+                Contact us
+              </p>
+              <ol class="space-y-1">
+                <li class="flex gap-2">
+                  <img src="./images/call.png" alt="" />
+                  <p class="font-light text-slate-500">+91 8138830876</p>
+                </li>
+                <li class="flex gap-2">
+                  <img src="./images/message.png" alt="" />
+                  <p class="font-light text-slate-500 text-sm">
+                    info@wezlon.com
+                  </p>
+                </li>
+                <li class="flex gap-2">
+                  <img
+                    src="./images/location.png"
+                    alt=""
+                    class="h-[35px] w-[35px]"
+                  />
+                  <p class="font-light text-slate-500 text-sm">
+                    4th Floor <br />
+                    Hi-Lite Business Park <br />
+                    Hi-Lite Business Park
+                  </p>
+                </li>
+              </ol>
+            </div>
           </div>
 
-          <div class="row-span-1 h-1/4">
-            <p class="text-[#1E1E1E] font-bold text-[18px]">Links</p>
-          </div>
-          <div class="row-span-1 h-1/4">
-            <p class="text-[#1E1E1E] font-bold text-[18px]">Courses</p>
-          </div>
+          <div
+            class="wezgrade p-4 flex justify-between items-center rounded-xl"
+          >
+            <p class="text-[white] rounded-lg">Copyright@2024 Wezlon</p>
 
-          <div>
-            <!-- <p>Links</p> -->
-          </div>
-
-          <div class="row-span-1 h-1/4">
-            <p class="text-[#1E1E1E] font-bold text-[18px]">Contact us</p>
-          </div>
-
-          <div class="row-span-1 h-3/4">
-            <p class="mb-4 font-light text-paraColor">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum. Curabitur vitae at Vivamus lacinia
-              odio vitae vestibulum. Curabitur vitae
-            </p>
-
-            <button
-              class="border border-[#FF1616] border-2 rounded-md p-6 py-3 text-secondary"
-            >
-              Enroll now
-            </button>
-          </div>
-
-          <div class="row-span-1 h-3/4">
-            <ol class="space-y-1">
-              <li class="font-light text-paraColor">About us</li>
-              <li class="font-light text-paraColor">Contact us</li>
-              <li class="font-light text-paraColor">Blog</li>
-            </ol>
-          </div>
-          <div class="row-span-1 h-3/4">
-            <ol class="space-y-1">
-              <li class="font-light text-paraColor">MERN Stack Development</li>
-              <li class="font-light text-paraColor">Flutter App Development</li>
-              <li class="font-light text-paraColor">UI UX Design</li>
-            </ol>
-          </div>
-          <div class="row-span-1 h-3/4">
-            <ol class="space-y-1">
-              <li class="font-light text-paraColor">Digital Marketing</li>
-              <li class="font-light text-paraColor">Python</li>
-              <li class="font-light text-paraColor">DevOps</li>
-            </ol>
-          </div>
-          <div class="row-span-1 h-3/4">
-            <ol class="space-y-1">
-              <li class="flex gap-2" > <img src="./images/call.png" alt=""> <p class="font-light text-paraColor">+91 8138830876</p></li>
-              <li class="flex gap-2" > <img src="./images/message.png" alt=""><p class="font-light text-paraColor"> info@wezlon.com</p></li>
-              <li class="flex gap-2" > <img src="./images/location.png" alt="" class="h-[35px] w-[35px]">
-                <p class="font-light text-paraColor"> 4th Floor <br />
-                Hi-Lite Business Park <br />
-                Hi-Lite Business Park
-                </p>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="wezgrade p-4 flex justify-between items-center rounded-xl">
-          <p class="text-[white] rounded-lg">Copyright@2024 Wezlon</p>
-
-          <div class="flex flex-row-reverse gap-1">
-            <img
-              class="btn-floating m-1 w-[35px] h-[35px]"
-              src="./images/fb.png"
-              alt=""
-            />
-            <img
-              class="btn-floating m-1 w-[35px] h-[35px]"
-              src="./images/insta.png"
-              alt=""
-            />
-            <img class="btn-floating m-1 w-[35px] h-[35px]" src="./images/location-icon.png" alt="" />
+            <div class="flex flex-row-reverse gap-1">
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/fb.png"
+                alt=""
+              />
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/insta.png"
+                alt=""
+              />
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/location-icon.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>

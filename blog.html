@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wezlon | Blog</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7C0A0A",
+              secondary: "#FF1616",
+              paraColor: "#000000",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="p-10 h-lvh">
+      <div
+        class="h-full bg-cover bg-no-repeat rounded-2xl p-14 flex items-end"
+        style="background-image: url(./images/blogBanner.jpg)"
+      >
+        <div class="w-full">
+          <h1 class="text-white text-lg">Featured</h1>
+          <div class="flex justify-between items-center">
+            <div>
+              <h2 class="text-white text-5xl font-bold">
+                Breaking into product design :
+              </h2>
+              <h2 class="text-white text-5xl font-bold">
+                Advice from an untitled founder, Frank
+              </h2>
+            </div>
+            <button>
+              <img src="images/Vector.png" alt="" class="h-11" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-10 py-5">
+      <p class="text-2xl font-bold mb-6">Recent blog posts</p>
+      <div class="grid grid-cols-3 gap-6">
+        <div class="flex flex-col gap-2">
+          <img src="images/blog1.jpg" alt="" class="rounded-xl" />
+          <h3 class="text-xl font-bold">Migrating to new technology</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="flex items-center gap-2">
+            <img class="h-9 w-9" src="images/profile.png" alt="" />
+            <p class="font-bold flex items-center gap-2">
+              Jonathan Wills
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="black"
+                  class="h-2 w-2 rounded-full"
+                >
+                  <circle cx="8" cy="8" r="12" />
+                </svg>
+              </span>
+              19 Jan 2024
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <img src="images/blog2.jpg" alt="" class="rounded-xl" />
+          <h3 class="text-xl font-bold">Migrating to new technology</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="flex items-center gap-2">
+            <img class="h-9 w-9" src="images/profile.png" alt="" />
+            <p class="font-bold flex items-center gap-2">
+              Jonathan Wills
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="black"
+                  class="h-2 w-2 rounded-full"
+                >
+                  <circle cx="8" cy="8" r="12" />
+                </svg>
+              </span>
+              19 Jan 2024
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <img src="images/blog3.jpg" alt="" class="rounded-xl" />
+          <h3 class="text-xl font-bold">Migrating to new technology</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="flex items-center gap-2">
+            <img class="h-9 w-9" src="images/profile.png" alt="" />
+            <p class="font-bold flex items-center gap-2">
+              Jonathan Wills
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="black"
+                  class="h-2 w-2 rounded-full"
+                >
+                  <circle cx="8" cy="8" r="12" />
+                </svg>
+              </span>
+              19 Jan 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
