@@ -30,74 +30,178 @@
     />
   </head>
   <body>
-    <section class="aboutHero mb-10">
-      <div class="flex gap-8 justify-between p-10 mb-8">
-        <img class="w-[445px]" src="./images/abouthero.png" alt="" />
+    <header
+      class="py-4 px-2 shadow-[rgba(0,0,5,0.2)_0px_4px_20px_0px] fixed bg-[white] w-full"
+    >
+      <!-- Mobile Navigation -->
+      <div class="flex justify-between lg:hidden">
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="./images/wez-logo.png"
+            alt=""
+            width="185"
+          />
+        </div>
+
+        <div class="flex gap-3">
+          <button class="bg-secondary rounded-md px-2 text-white text-sm">
+            Enroll now
+          </button>
+          <div class="menu-btn-1" onclick="menuBtnFunction(this)">
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-nav"
+        class="mobile-nav absolute right-0 bottom-0 h-full top-[64px] w-[265px]"
+        style="height: calc(100vh - 64px)"
+        hidden
+      >
+        <nav
+          class="bg-secondary h-full shadow-[rgba(51,10,10,1)_-8px_0px_29px_-10px]"
+        >
+          <ol class="flex direction flex-col gap-3 pt-4">
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/course.html"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="blog.html"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ol>
+
+          <div
+            class="flex flex-row-reverse absolute bottom-0 right-0 p-3 gap-2"
+          >
+            <img class="btn-floating m-1" src="./images/fb.png" alt="" />
+            <img class="btn-floating m-1" src="./images/insta.png" alt="" />
+            <img src="./images/linkedin.png" alt="" />
+          </div>
+        </nav>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="lg:flex items-center justify-center gap-36 xl:gap-48 hidden">
         <div>
-          <h2 class="text-4xl font-bold mb-8">
+          <img src="./images/wez-logo.png" alt="" class="w-40" />
+        </div>
+        <nav>
+          <ol class="flex gap-10">
+            <a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Home</li> </a
+            ><a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Cources</li> </a
+            ><a class="navHover" href="/blog">
+              <li class="font-bold hover:text-secondary">Blog</li> </a
+            ><a class="navHover" href="/about.html">
+              <li class="font-bold hover:text-secondary">About</li> </a
+            ><a class="navHover" href="/contact.html">
+              <li class="font-bold hover:text-secondary">Contact Us</li>
+            </a>
+          </ol>
+        </nav>
+        <button class="wezgrade text-[white] p-3 px-6 rounded-lg text-sm">
+          Enroll now
+        </button>
+      </div>
+    </header>
+
+    <section class="aboutHero mb-10 pt-20">
+      <div class="lg:flex gap-8 justify-between p-5 lg:p-10 mb-8">
+        <!-- <div class="w-[445px] h-full"> -->
+        <img
+          class="rounded-lg w-[445px] mb-5"
+          src="./images/abouthero.png"
+          alt=""
+        />
+        <!-- </div> -->
+        <div>
+          <h2 class="text-4xl text-center lg:text-left font-bold mb-8">
             About <span class="text-secondary">Wezlon</span>
           </h2>
-          <p class="text-lg text-slate-500">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula
-            suscipit aliquet. Nullam a orci non lorem faucibus venenatis.
-            Suspendisse potenti, et viverra est condimentum. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
-            vestibulum. Curabitur vitae arcu id ligula suscipit aliquet. Nullam
-            a orci non lorem faucibus venenatis. Suspendisse potenti, et viverra
-            est condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Vivamus lacinia odio vitae vestibulum. Curabitur vitae arcu id
-            ligula suscipit aliquet. Nullam a orci non lorem faucibus venenatis.
-            Suspendisse potenti, et viverra est condimentum. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
-            vestibulum. Curabitur vitae arcu id ligula suscipit aliquet. Nullam
-            a orci non lorem faucibus venenatis. Suspendisse potenti, et viverra
-            est condimentum.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Vivamus lacinia odio vitae vestibulum. Curabitur vitae arcu id
-            ligula suscipit aliquet. Nullam a orci non lorem faucibus venenatis.
-            Suspendisse potenti, et viverra est condimentum.
+          <p class="text-lg text-slate-500 text-center lg:text-left">
+            Welcome to Wezlon, where innovation meets expertise. We are driven
+            by a passion for delivering cutting-edge digital solutions tailored
+            to your unique business needs. With a team of highly skilled
+            professionals, we specialize in a range of services, including web
+            development, app development, UI/UX design, digital marketing, and
+            IT solutions.
+          </p>
+          <p class="text-lg text-slate-500 text-center lg:text-left">
+            Our approach is rooted in creativity, efficiency, and a commitment
+            to excellence. We believe in harnessing the latest technologies and
+            methodologies to help our clients stay ahead in an ever-evolving
+            digital landscape. Whether you're looking to build a robust website,
+            develop a mobile app, or enhance your brand's online presence,
+            Wezlon is here to help you every step.
           </p>
         </div>
       </div>
 
       <div class="wezgrade p-4 shadow-[rgba(255,0,0,1)_0px_35px_101px_-28px]">
-        <div class="grid grid-cols-4 gap-y-4 text-center text-white">
+        <div
+          class="grid grid-cols-2 lg:grid-cols-4 gap-y-4 text-center text-white"
+        >
           <div>
-            <h1 class="text-xl font-bold">150+</h1>
-            <p>Students</p>
+            <h1 class="text-xl lg:text-3xl font-bold">150+</h1>
+            <p class="text-lg">Students</p>
           </div>
           <div>
-            <h1 class="text-xl font-bold">32+</h1>
-            <p>Placements</p>
+            <h1 class="text-xl lg:text-3xl font-bold">32+</h1>
+            <p class="text-lg">Placements</p>
           </div>
           <div>
-            <h1 class="text-xl font-bold">32+</h1>
-            <p>Placements</p>
+            <h1 class="text-xl lg:text-3xl font-bold">32+</h1>
+            <p class="text-lg">Placements</p>
           </div>
           <div>
-            <h1 class="text-xl font-bold">99%</h1>
-            <p>Satisfaction</p>
+            <h1 class="text-xl lg:text-3xl font-bold">99%</h1>
+            <p class="text-lg">Satisfaction</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="p-10">
-      <h2 class="text-4xl font-bold mb-8">
+    <section class="p-5 lg:p-10">
+      <h2 class="text-4xl font-bold mb-8 text-center">
         Why <span class="text-secondary">Choose us </span>
       </h2>
-      <p class="text-lg text-slate-500 mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-        odio vitae vestibulum. Curabitur vitae arcu id ligula suscipit aliquet.
-        Nullam a orci non lorem faucibus venenatis. Suspendisse potenti, et
-        viverra est condimentum. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Vivamus lacinia odio vitae vestibulum. Curabitur vitae
-        arcu id ligula suscipit aliquet. Nullam a orci non lorem faucibus
-        venenatis. Suspendisse potenti, et viverra est condimentum. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
-        vestibulum.
+      <p class="text-lg text-center lg:text-left text-slate-500 mb-6">
+        At Wezlon, we don't just deliver services, we create experiences. Our
+        mission is to empower businesses through innovative solutions that drive
+        growth, streamline operations, and create lasting value. Let’s work
+        together to turn your vision into reality.
       </p>
-      <div class="grid grid-cols-3 gap-x-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 lg:gap-x-4">
         <div class="wezboxShadow flex items-center gap-4 p-4 rounded-2xl">
           <img src="./images/lifetime.png" alt="" />
           <div>
@@ -142,9 +246,9 @@
       </div>
     </section>
 
-    <section class="p-10">
-      <h2 class="text-4xl font-bold mb-8">
-        Frequently Asked <span class="text-secondary">Questions</span>
+    <section class="p-5 lg:p-10">
+      <h2 class="text-4xl font-bold mb-8 text-center lg:text-left">
+        Frequently Asked <span class="text-secondary">Question's</span>
       </h2>
       <div class="flex gap-8">
         <div class="flex flex-col gap-4">
@@ -152,7 +256,7 @@
           <div class="bg-[white] wezboxShadow p-5 rounded-lg">
             <button
               onclick="toggleAccordion(1)"
-              class="w-full flex justify-between items-center font-bold text-slate-800"
+              class="w-full flex justify-between items-center font-bold text-slate-800 text-left sm:text-center"
             >
               <span
                 >Life timLorem ipsum dolor sit amet consect etur adipiscing
@@ -191,7 +295,7 @@
           <div class="bg-[white] wezboxShadow p-5 rounded-lg">
             <button
               onclick="toggleAccordion(2)"
-              class="w-full flex justify-between items-center font-bold text-slate-800"
+              class="w-full flex justify-between items-center font-bold text-slate-800 text-left sm:text-center"
             >
               <span
                 >Life timLorem ipsum dolor sit amet consect etur adipiscing
@@ -230,7 +334,7 @@
           <div class="bg-[white] wezboxShadow p-5 rounded-lg">
             <button
               onclick="toggleAccordion(3)"
-              class="w-full flex justify-between items-center font-bold text-slate-800"
+              class="w-full flex justify-between items-center font-bold text-slate-800 text-left sm:text-center"
             >
               <span
                 >Life timLorem ipsum dolor sit amet consect etur adipiscing
@@ -269,7 +373,7 @@
           <div class="bg-[white] wezboxShadow p-5 rounded-lg">
             <button
               onclick="toggleAccordion(4)"
-              class="w-full flex justify-between items-center font-bold text-slate-800"
+              class="w-full flex justify-between items-center font-bold text-slate-800 text-left sm:text-center"
             >
               <span
                 >Life timLorem ipsum dolor sit amet consect etur adipiscing
@@ -308,7 +412,7 @@
           <div class="bg-[white] wezboxShadow p-5 rounded-lg">
             <button
               onclick="toggleAccordion(5)"
-              class="w-full flex justify-between items-center font-bold text-slate-800"
+              class="w-full flex justify-between items-center font-bold text-slate-800 text-left sm:text-center"
             >
               <span
                 >Life timLorem ipsum dolor sit amet consect etur adipiscing
@@ -347,7 +451,7 @@
           <div class="bg-[white] wezboxShadow p-5 rounded-lg">
             <button
               onclick="toggleAccordion(6)"
-              class="w-full flex justify-between items-center font-bold text-slate-800"
+              class="w-full flex justify-between items-center font-bold text-slate-800 text-left sm:text-center"
             >
               <span
                 >Life timLorem ipsum dolor sit amet consect etur adipiscing
@@ -383,11 +487,141 @@
           </div>
         </div>
 
-        <div>
+        <div class="hidden sm:block">
           <img src="./images/About.png" alt="" />
         </div>
       </div>
     </section>
+
+    <footer class="mt-24">
+      <div class="pb-11 p-6 lg:px-11">
+        <div
+          class="footerdiv wezboxShadow rounded-3xl p-7 lg:p-11 lg:w-[1260px] bg-[white]"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-[30%_10%_16%_10%_20%] gap-10 mb-6"
+          >
+            <div class="">
+              <img src="./images/wez-logo.png" alt="" class="mb-6" />
+
+              <p class="mb-4 font-light text-slate-500 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae at Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae
+              </p>
+
+              <button
+                class="border-2 border-[#FF1616] rounded-md p-5 py-2 text-secondary"
+              >
+                Enroll now
+              </button>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+                Links
+              </p>
+
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="about.html">About us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="contact.html">Contact us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="blog.html">Blog</a>
+                </li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+                Courses
+              </p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">
+                  MERN Stack Development
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  Flutter App Development
+                </li>
+                <li class="font-light text-slate-500 text-sm">UI UX Design</li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-16 hidden lg:block"
+              ></p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">
+                  Digital Marketing
+                </li>
+                <li class="font-light text-slate-500 text-sm">Python</li>
+                <li class="font-light text-slate-500 text-sm">DevOps</li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+                Contact us
+              </p>
+              <ol class="space-y-1">
+                <li class="flex gap-2">
+                  <img src="./images/call.png" alt="" />
+                  <p class="font-light text-slate-500">+91 8138830876</p>
+                </li>
+                <li class="flex gap-2">
+                  <img src="./images/message.png" alt="" />
+                  <p class="font-light text-slate-500 text-sm">
+                    info@wezlon.com
+                  </p>
+                </li>
+                <li class="flex gap-2">
+                  <img
+                    src="./images/location.png"
+                    alt=""
+                    class="h-[35px] w-[35px]"
+                  />
+                  <p class="font-light text-slate-500 text-sm">
+                    4th Floor <br />
+                    Hi-Lite Business Park <br />
+                    Hi-Lite Business Park
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div
+            class="wezgrade p-2 lg:p-4 lg:flex justify-between items-center rounded-xl"
+          >
+            <p class="text-[white] rounded-lg text-center mb-1 lg:mb-0">
+              Copyright@2024 Wezlon
+            </p>
+
+            <div class="flex flex-row justify-center gap-1">
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/fb.png"
+                alt=""
+              />
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/insta.png"
+                alt=""
+              />
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/location-icon.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script>
       function toggleAccordion(index) {
@@ -418,5 +652,6 @@
         }
       }
     </script>
+    <script src="./script.js"></script>
   </body>
 </html>
