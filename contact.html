@@ -30,8 +30,85 @@
     />
   </head>
   <body>
-    <header>
-      <div class="flex items-center justify-center gap-48 py-5">
+    <header
+      class="py-4 px-2 shadow-[rgba(0,0,5,0.2)_0px_4px_20px_0px] fixed bg-[white] w-full z-10"
+    >
+      <!-- Mobile Navigation -->
+      <div class="flex justify-between lg:hidden">
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="./images/wez-logo.png"
+            alt=""
+            width="185"
+          />
+        </div>
+
+        <div class="flex gap-3">
+          <button class="bg-secondary rounded-md px-2 text-white text-sm">
+            Enroll now
+          </button>
+          <div class="menu-btn-1" onclick="menuBtnFunction(this)">
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-nav"
+        class="mobile-nav absolute right-0 bottom-0 h-full top-[64px] w-[265px]"
+        style="height: calc(100vh - 64px)"
+        hidden
+      >
+        <nav
+          class="bg-secondary h-full shadow-[rgba(51,10,10,1)_-8px_0px_29px_-10px]"
+        >
+          <ol class="flex direction flex-col gap-3 pt-4">
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/blog.html"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ol>
+
+          <div
+            class="flex flex-row-reverse absolute bottom-0 right-0 p-3 gap-2"
+          >
+            <img class="btn-floating m-1" src="./images/fb.png" alt="" />
+            <img class="btn-floating m-1" src="./images/insta.png" alt="" />
+            <img src="./images/linkedin.png" alt="" />
+          </div>
+        </nav>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="lg:flex items-center justify-center gap-36 xl:gap-48 hidden">
         <div>
           <img src="./images/wez-logo.png" alt="" class="w-40" />
         </div>
@@ -56,13 +133,13 @@
       </div>
     </header>
 
-    <section class="relative">
+    <section class="relative ">
       <div class="h-[480px] contactHero"></div>
       <div
-        class="flex shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] absolute top-[100%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[1014px] rounded-3xl"
+        class="flex flex-col-reverse lg:flex-row shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] absolute top-[100%] left-[50%] translate-y-[-38%] lg:translate-y-[-50%] translate-x-[-50%] w-[90%] sm:w-[70%] lg:w-[1014px] rounded-3xl "
       >
         <!-- First Section -->
-        <div class="bg-[#F2F4F8] p-8 w-[50%] rounded-l-2xl">
+        <div class="bg-[#F2F4F8] p-8 lg:w-[50%] rounded-bl-2xl rounded-br-2xl lg:rounded-br-none lg:rounded-tl-2xl ">
           <h3 class="font-extrabold text-3xl mb-4">Contact us</h3>
           <p class="mb-6 text-slate-600 text-sm">
             Wezlon is ready to provide the right solution according to your
@@ -143,10 +220,10 @@
         </div>
 
         <!-- Second Section -->
-        <div class="p-8 w-[50%] bg-[white] rounded-r-2xl">
+        <div class="p-8 lg:w-[50%] bg-[white] rounded-tl-2xl rounded-tr-2xl lg:rounded-tl-none lg:rounded-br-2xl ">
           <h2 class="font-extrabold text-3xl mb-4">Send us a message</h2>
           <form action="" class="flex flex-col gap-3">
-            <div class="flex gap-4">
+            <div class="flex gap-4 flex-col sm:flex-row">
               <div class="w-full">
                 <label class="block mb-2 text-sm text-slate-600"> Name </label>
                 <input
@@ -198,10 +275,10 @@
         </div>
       </div>
     </section>
-    <div class="h-[300px]"></div>
+    <div class="h-[645px] lg:h-[300px]"></div>
 
     <!-- Location with google map -->
-    <section>
+    <section class="h-[59rem] lg:h-auto">
       <div style="width: 100%; height: 500px">
         <iframe
           width="100%"
@@ -219,19 +296,22 @@
 
     <footer class="relative">
       <div
-        class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] pb-11"
+        class="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] pb-11 w-[90%] sm:w-[70%] lg:w-auto"
       >
         <div
-          class="footerdiv wezboxShadow rounded-3xl p-11 w-[1260px] bg-[white]"
+          class="footerdiv wezboxShadow rounded-3xl p-7 lg:p-11 lg:w-[1260px] bg-[white]"
         >
-          <div class="grid grid-cols-[30%_10%_16%_10%_20%] gap-10 mb-6">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-[30%_10%_16%_10%_20%] gap-10 mb-6"
+          >
             <div class="">
               <img src="./images/wez-logo.png" alt="" class="mb-6" />
 
               <p class="mb-4 font-light text-slate-500 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                lacinia odio vitae vestibulum. Curabitur vitae at Vivamus
-                lacinia odio vitae vestibulum. Curabitur vitae
+                Wezlon IT Job Training Academy in Kerala offers urgent,
+                industry-focused training programs designed to equip individuals
+                with the skills required for immediate job placement in the IT
+                sector. 
               </p>
 
               <button
@@ -242,17 +322,27 @@
             </div>
 
             <div class="">
-              <p class="text-[#1E1E1E] font-bold text-[18px] mb-9">Links</p>
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+                Links
+              </p>
 
               <ol class="space-y-1">
-                <li class="font-light text-slate-500 text-sm">About us</li>
-                <li class="font-light text-slate-500 text-sm">Contact us</li>
-                <li class="font-light text-slate-500 text-sm">Blog</li>
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="about.html">About us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="contact.html">Contact us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="blog.html">Blog</a>
+                </li>
               </ol>
             </div>
 
             <div class="">
-              <p class="text-[#1E1E1E] font-bold text-[18px] mb-9">Courses</p>
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+                Courses
+              </p>
               <ol class="space-y-1">
                 <li class="font-light text-slate-500 text-sm">
                   MERN Stack Development
@@ -265,7 +355,9 @@
             </div>
 
             <div class="">
-              <p class="text-[#1E1E1E] font-bold text-[18px] mb-16"></p>
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-16 hidden lg:block"
+              ></p>
               <ol class="space-y-1">
                 <li class="font-light text-slate-500 text-sm">
                   Digital Marketing
@@ -276,7 +368,7 @@
             </div>
 
             <div class="">
-              <p class="text-[#1E1E1E] font-bold text-[18px] mb-9">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
                 Contact us
               </p>
               <ol class="space-y-1">
@@ -307,11 +399,13 @@
           </div>
 
           <div
-            class="wezgrade p-4 flex justify-between items-center rounded-xl"
+            class="wezgrade p-2 lg:p-4 lg:flex justify-between items-center rounded-xl"
           >
-            <p class="text-[white] rounded-lg">Copyright@2024 Wezlon</p>
+            <p class="text-[white] rounded-lg text-center mb-1 lg:mb-0">
+              Copyright@2024 Wezlon
+            </p>
 
-            <div class="flex flex-row-reverse gap-1">
+            <div class="flex flex-row justify-center gap-1">
               <img
                 class="btn-floating m-1 w-[35px] h-[35px]"
                 src="./images/fb.png"
