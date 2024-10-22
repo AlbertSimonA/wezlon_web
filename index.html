@@ -750,7 +750,7 @@
       </div>
     </section>
 
-    <section class="px-4 lg:px-24 mb-12">
+    <!-- <section class="px-4 lg:px-24 mb-12">
       <div class="block md:flex mb-6 lg:mb-12 items-end justify-between">
         <div class="my-4">
           <button
@@ -852,7 +852,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="px-4 lg:px-20 mb-12">
       <div
@@ -874,6 +874,7 @@
           </p>
           <button
             class="px-5 py-2 flex items-center gap-2 text-white wezgrade rounded-md lg:text-lg"
+            onclick="openContactDialog()"
           >
             Contact us now
             <svg
@@ -915,6 +916,7 @@
 
               <button
                 class="border-2 border-[#FF1616] rounded-md p-5 py-2 text-secondary lg:text-lg"
+                onclick="openDialog()"
               >
                 Enroll now
               </button>
@@ -1179,7 +1181,7 @@
 
     <dialog
       id="hireDialog"
-      class="p-3 border-spacing-0 z-20 rounded-3xl w-[930px] shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]"
+      class="p-3 border-spacing-0 z-20 rounded-3xl w-[930px] shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] fixed top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]"
     >
       <div class="flex gap-7 p-1">
         <div
@@ -1236,7 +1238,7 @@
 
         <div class="w-1/2 py-5 pr-5">
           <div class="flex justify-end">
-            <button>
+            <button onclick="closeContactDialog()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

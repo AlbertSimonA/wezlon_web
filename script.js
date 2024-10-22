@@ -11,6 +11,7 @@ function menuBtnFunction(menuBtn) {
 }
 
 const dialog = document.querySelector("#formDialog")
+const contactDialog = document.querySelector("#hireDialog")
 
 const openDialog = function() {
   dialog.showModal();
@@ -20,3 +21,10 @@ const closeDialog = function() {
   dialog.close();
 }
 
+const openContactDialog = function() {
+  contactDialog.showModal()
+}
+
+const closeContactDialog = function() {
+  contactDialog.close()
+}
