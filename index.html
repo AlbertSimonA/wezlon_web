@@ -28,9 +28,7 @@
     />
   </head>
   <body>
-    <header
-      class="py-4 px-2 shadow-[rgba(0,0,5,0.2)_0px_4px_20px_0px] fixed bg-[white] w-full"
-    >
+    <header class="py-4 px-2 bg-[white] w-full">
       <!-- Mobile Navigation -->
       <div class="flex justify-between lg:hidden">
         <div class="logo">
@@ -106,7 +104,7 @@
       </div>
 
       <!-- Desktop Nav -->
-      <div class="lg:flex items-center justify-center gap-36 xl:gap-48 hidden">
+      <div class="lg:flex items-center justify-between px-14 xl:gap-48 hidden">
         <div>
           <img src="./images/wez-logo.png" alt="" class="w-40" />
         </div>
@@ -125,7 +123,7 @@
             </a>
           </ol>
         </nav>
-        <button class="wezgrade text-[white] p-3 px-6 rounded-lg text-sm">
+        <button onclick="openDialog()" class="wezgrade text-[white] p-3 px-6 rounded-lg text-sm">
           Enroll now
         </button>
       </div>
@@ -134,22 +132,22 @@
     <!-- banner section started -->
     <section class="mb-12 pt-[98px] sm:mb-28">
       <div
-        class="mb-10 flex flex-col lg:flex-row justify-center items-center lg:gap-20 lg:px-12 lg:py-12"
+        class="mb-10 flex flex-col lg:flex-row justify-center items-center lg:gap-20 lg:px-14 lg:py-12"
       >
         <div class="mb-6 lg:w-1/2">
           <h1
-            class="text-4xl lg:text-5xl text-center lg:text-left font-extrabold"
+            class="text-4xl lg:text-6xl text-center lg:text-left font-extrabold"
           >
             Kerala's First <br class="lg:hidden" />
             &
           </h1>
           <h2
-            class="text-4xl lg:text-5xl text-center lg:text-left font-extrabold text-secondary mb-4"
+            class="text-4xl lg:text-6xl text-center lg:text-left font-extrabold text-secondary mb-4"
           >
             Largest IT Job Training Academy
           </h2>
           <p
-            class="text-base text-center lg:text-left text-slate-500 font-light px-2"
+            class="text-base lg:text-xl text-center lg:text-left text-slate-500 font-light px-2"
           >
             At Wezlon, we believe in transforming dreams into reality. We know
             the power of technology and how mastering it can change your life.
@@ -169,26 +167,24 @@
       </div>
 
       <!-- achievment section -->
-      <div
-        class="bg-secondary p-4 shadow-[rgba(255,0,0,1)_0px_35px_101px_-28px]"
-      >
+      <div class="wezgrade p-4 shadow-[rgba(255,0,0,1)_0px_35px_101px_-28px]">
         <div
-          class="grid grid-cols-2 lg:grid-cols-4 gap-y-4 text-center text-white"
+          class="grid grid-cols-2 lg:grid-cols-4 gap-y-6 text-center text-white"
         >
           <div>
-            <h1 class="text-xl lg:text-3xl font-bold">150+</h1>
+            <h1 class="text-xl lg:text-4xl font-bold">150+</h1>
             <p class="text-lg">Students</p>
           </div>
           <div>
-            <h1 class="text-xl lg:text-3xl font-bold">32+</h1>
+            <h1 class="text-xl lg:text-4xl font-bold">32+</h1>
             <p class="text-lg">Placements</p>
           </div>
           <div>
-            <h1 class="text-xl lg:text-3xl font-bold">32+</h1>
+            <h1 class="text-xl lg:text-4xl font-bold">32+</h1>
             <p class="text-lg">Placements</p>
           </div>
           <div>
-            <h1 class="text-xl lg:text-3xl font-bold">99%</h1>
+            <h1 class="text-xl lg:text-4xl font-bold">99%</h1>
             <p class="text-lg">Satisfaction</p>
           </div>
         </div>
@@ -227,10 +223,9 @@
                   Daily Typing Practice
                 </h4>
                 <p class="text-sm">
-                  Master the art of speed and accuracy with our daily typing
-                  sessions. We believe that strong typing skills are the
-                  foundation of any IT career, and daily practice ensures you
-                  build confidence and proficiency over time.
+                  Boost your speed and accuracy with daily typing exercises,
+                  helping you build confidence and proficiency for your IT
+                  career.
                 </p>
               </div>
             </div>
@@ -247,13 +242,11 @@
               </div>
               <div class="flex-grow">
                 <h4 class="text-secondary text-xl font-extrabold">
-                  Daily English Section
+                  Weekly Reviews by Experts
                 </h4>
                 <p class="text-sm">
-                  Our daily English
-                  communication classes are designed to enhance your speaking,
-                  writing, and comprehension skills, empowering you to express
-                  ideas clearly and confidently in professional settings.
+                  Receive expert feedback and personalized guidance in weekly
+                  sessions, ensuring you stay on track and sharpen your skills.
                 </p>
               </div>
             </div>
@@ -273,10 +266,10 @@
                   Weekly Review with Industry Experts
                 </h4>
                 <p class="text-sm">
-                  Stay on track with weekly reviews conducted by top industry
-                  experts. These sessions provide invaluable feedback,
-                  real-world insights, and personalized guidance to help you
-                  refine your skills and prepare for the challenges ahead.
+                  By the end of the course, you'll earn a job-ready
+                  certification recognized by top companies, gaining hands-on
+                  experience, refined communication skills, and expert guidance
+                  to confidently enter the IT field.
                 </p>
               </div>
             </div>
@@ -296,17 +289,18 @@
                   Achieving Job-Ready Certification
                 </h4>
                 <p class="text-sm">
-                  By the end of the course, you’ll achieve a job-ready
-                  certification, recognized by top companies. With hands-on
-                  experience, polished communication skills, and expert advice,
-                  you’ll be fully equipped to enter the competitive IT field
-                  with confidence.
+                  By the end of the course, you'll earn a job-ready
+                  certification recognized by top companies, gaining hands-on
+                  experience, refined communication skills, and expert guidance
+                  to confidently enter the IT field.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Desktop Roadmap ⭐⭐⭐ 🛣️🛣️🛣️ ⭐⭐⭐ -->
       <div class="hidden lg:block relative -z-10">
         <img
           src="./images/birds.svg"
@@ -331,16 +325,14 @@
               Daily Typing Practice
             </h4>
             <p class="text-sm">
-              Master the art of speed and accuracy with our daily typing
-              sessions. We believe that strong typing skills are the foundation
-              of any IT career, and daily practice ensures you build confidence
-              and proficiency over time.
+              Boost your speed and accuracy with daily typing exercises, helping
+              you build confidence and proficiency for your IT career.
             </p>
           </div>
         </div>
 
         <div
-          class="flex justify-between items-center gap-4 w-80 absolute top-60 left-8"
+          class="flex justify-between items-center gap-4 w-96 absolute top-60 left-8"
         >
           <div
             class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
@@ -356,10 +348,9 @@
               Daily English Section
             </h4>
             <p class="text-sm">
-              Our daily English
-              communication classes are designed to enhance your speaking,
-              writing, and comprehension skills, empowering you to express ideas
-              clearly and confidently in professional settings.
+              Improve your speaking, writing, and comprehension with daily
+              English classes designed to enhance communication in professional
+              environments
             </p>
           </div>
         </div>
@@ -381,16 +372,14 @@
               Weekly Review with Industry Experts
             </h4>
             <p class="text-sm">
-              Stay on track with weekly reviews conducted by top industry
-              experts. These sessions provide invaluable feedback, real-world
-              insights, and personalized guidance to help you refine your skills
-              and prepare for the challenges ahead.
+              Receive expert feedback and personalized guidance in weekly
+              sessions, ensuring you stay on track and sharpen your skills.
             </p>
           </div>
         </div>
 
         <div
-          class="flex justify-between items-center gap-4 w-80 absolute top-[30rem] left-8"
+          class="flex justify-between items-center gap-4 w-96 absolute top-[30rem] left-8"
         >
           <div
             class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
@@ -406,11 +395,10 @@
               Achieving Job-Ready Certification
             </h4>
             <p class="text-sm">
-              By the end of the course, you’ll achieve a job-ready
-              certification, recognized by top companies. With hands-on
-              experience, polished communication skills, and expert advice,
-              you’ll be fully equipped to enter the competitive IT field with
-              confidence.
+              By the end of the course, you'll earn a job-ready certification
+              recognized by top companies, gaining hands-on experience, refined
+              communication skills, and expert guidance to confidently enter the
+              IT field.
             </p>
           </div>
         </div>
@@ -452,9 +440,9 @@
       </div>
     </section>
 
-    <section class="px-4 lg:px-12 mb-12">
+    <section class="px-4 lg:px-24 mb-12">
       <div class="">
-        <div class="my-4">
+        <div class="my-4 lg:mb-12">
           <button
             class="px-4 py-2 mb-4 text-secondary rounded-full border border-secondary cursor-auto"
           >
@@ -479,12 +467,12 @@
                 />
               </div>
               <div>
-                <h1 class="text-lg font-bold xs:w-auto">
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">
                   MERN Stack Development
                 </h1>
-                <p class="hidden sm:block text-sm text-slate-500">
-                  – Unveil the robust architecture of full-stack JavaScript,
-                  where MongoDB, Express, React, and Node.js converge to create
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
+                  Unveil the robust architecture of full-stack JavaScript, where
+                  MongoDB, Express, React, and Node.js converge to create
                   cutting-edge web applications.
                 </p>
               </div>
@@ -529,10 +517,10 @@
                 />
               </div>
               <div>
-                <h1 class="text-lg font-bold xs:w-auto">
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">
                   Flutter App Development
                 </h1>
-                <p class="hidden sm:block text-sm text-slate-500">
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
                   Immerse yourself in the art of crafting cross-platform mobile
                   experiences, leveraging the power of Google's versatile UI
                   toolkit for iOS and Android.
@@ -579,8 +567,10 @@
                 />
               </div>
               <div>
-                <h1 class="text-lg font-bold xs:w-auto">UI UX Design</h1>
-                <p class="hidden sm:block text-sm text-slate-500">
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">
+                  UI UX Design
+                </h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
                   Shape the digital landscapes through a blend of creativity and
                   analytical design thinking, ensuring intuitive and engaging
                   user interactions
@@ -627,8 +617,10 @@
                 />
               </div>
               <div>
-                <h1 class="text-lg font-bold xs:w-auto">Digital Marketing</h1>
-                <p class="hidden sm:block text-sm text-slate-500">
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">
+                  Digital Marketing
+                </h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
                   Master the strategies of driving online visibility, harnessing
                   the forces of SEO, SEM, and data-driven campaigns to amplify
                   brand presence in the digital age.
@@ -675,8 +667,8 @@
                 />
               </div>
               <div>
-                <h1 class="text-lg font-bold xs:w-auto">Python</h1>
-                <p class="hidden sm:block text-sm text-slate-500">
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">Python</h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
                   Explore the elegance and simplicity of this versatile
                   programming language, known for its powerful libraries in data
                   science, machine learning, and beyond.
@@ -723,8 +715,8 @@
                 />
               </div>
               <div>
-                <h1 class="text-lg font-bold xs:w-auto">DevOps</h1>
-                <p class="hidden sm:block text-sm text-slate-500">
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">DevOps</h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
                   Bridge the gap between development and operations, fostering a
                   culture of continuous integration, automation, and
                   collaborative workflows to accelerate software delivery.
@@ -758,7 +750,7 @@
       </div>
     </section>
 
-    <section class="px-4 lg:px-12 mb-12">
+    <section class="px-4 lg:px-24 mb-12">
       <div class="block md:flex mb-6 lg:mb-12 items-end justify-between">
         <div class="my-4">
           <button
@@ -816,21 +808,23 @@
           class="flex lg:justify-end flex-row lg:flex-col items-end p-2 bg-[#efefef] w-full h-[31rem] lg:h-auto rounded-3xl relative mt-20 -z-10"
         >
           <img
-            class="absolute h-[23rem] top-[-5.6rem] left-[50%] -translate-x-1/2 lg:left-[30px] lg:translate-x-0"
+            class="absolute h-[23rem] lg:h-[25rem] top-[-5.6rem] lg:top-[-5.9rem] left-[50%] -translate-x-1/2 lg:left-[47px] lg:translate-x-0"
             src="./images/people1.png"
             alt=""
           />
           <div
-            class="p-8 bg-white w-full lg:w-64 rounded-3xl h-[210px] lg:h-auto"
+            class="p-8 bg-white w-full lg:w-80 rounded-3xl h-[210px] lg:h-full"
           >
-            <p class="text-slate-500 text-center text-sm mb-4">
+            <p class="text-slate-500 text-center text-sm mb-4 lg:text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
               lacinia odio vitae vestibulum. Curabitur vitae Vivamus lacinia
               odio vitae vestibulum. Curabitur vitae
             </p>
             <hr class="mb-4" />
-            <p class="text-lg text-center font-semibold">Warren Anderson</p>
-            <p class="text-xs text-center">MERN Stack Developer</p>
+            <p class="text-lg text-center font-semibold lg:text-xl">
+              Warren Anderson
+            </p>
+            <p class="text-xs text-center lg:text-sm">MERN Stack Developer</p>
           </div>
         </div>
 
@@ -838,36 +832,40 @@
           class="flex lg:justify-end flex-row lg:flex-col items-end p-2 bg-[#efefef] w-full h-[31rem] lg:h-auto rounded-3xl relative mt-20 -z-10"
         >
           <img
-            class="absolute h-[23rem] top-[-5.6rem] left-[50%] -translate-x-1/2 lg:left-[30px] lg:translate-x-0"
+            class="absolute h-[23rem] lg:h-[25rem] top-[-5.6rem] lg:top-[-5.9rem] left-[50%] -translate-x-1/2 lg:left-[47px] lg:translate-x-0"
             src="./images/people2.png"
             alt=""
           />
           <div
-            class="p-8 bg-white w-full lg:w-64 rounded-3xl h-[210px] lg:h-auto"
+            class="p-8 bg-white w-full lg:w-80 rounded-3xl h-[210px] lg:h-full"
           >
-            <p class="text-slate-500 text-center text-sm mb-4">
+            <p class="text-slate-500 text-center text-sm mb-4 lg:text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
               lacinia odio vitae vestibulum. Curabitur vitae Vivamus lacinia
               odio vitae vestibulum. Curabitur vitae
             </p>
             <hr class="mb-4" />
-            <p class="text-lg text-center font-semibold">Warren Anderson</p>
-            <p class="text-xs text-center">Flutter Developer</p>
+            <p class="text-lg text-center font-semibold lg:text-xl">
+              Warren Anderson
+            </p>
+            <p class="text-xs text-center lg:text-sm">Flutter Developer</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="px-4 lg:px-12 mb-12">
+    <section class="px-4 lg:px-20 mb-12">
       <div
         class="wezboxShadow lg:flex items-center gap-14 rounded-3xl py-5 px-14"
       >
         <img src="./images/hireimg.png" alt="" class="w-[280px]" />
         <div>
-          <h1 class="text-4xl text-center lg:text-left font-extrabold mb-3">
+          <h1
+            class="text-4xl text-center lg:text-left lg:text-6xl font-extrabold mb-3"
+          >
             Hire from <span class="text-secondary"> Wezlon ?</span>
           </h1>
-          <p class="text-sm text-slate-500 mb-3">
+          <p class="text-sm text-slate-500 mb-3 lg:text-lg">
             Wezlon is an IT job training academy that equips learners with
             practical skills and knowledge for a successful career in the tech
             industry. Our programs focus on hands-on learning, industry-relevant
@@ -875,7 +873,7 @@
             fast-growing field of information technology.
           </p>
           <button
-            class="px-5 py-2 flex items-center gap-2 text-white wezgrade rounded-md"
+            class="px-5 py-2 flex items-center gap-2 text-white wezgrade rounded-md lg:text-lg"
           >
             Contact us now
             <svg
@@ -908,50 +906,56 @@
             <div class="">
               <img src="./images/wez-logo.png" alt="" class="mb-6" />
 
-              <p class="mb-4 font-light text-slate-500 text-sm">
+              <p class="mb-4 font-light text-slate-500 text-sm lg:text-lg">
                 Wezlon IT Job Training Academy in Kerala offers urgent,
                 industry-focused training programs designed to equip individuals
                 with the skills required for immediate job placement in the IT
-                sector. 
+                sector.
               </p>
 
               <button
-                class="border-2 border-[#FF1616] rounded-md p-5 py-2 text-secondary"
+                class="border-2 border-[#FF1616] rounded-md p-5 py-2 text-secondary lg:text-lg"
               >
                 Enroll now
               </button>
             </div>
 
             <div class="">
-              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
                 Links
               </p>
 
               <ol class="space-y-1">
-                <li class="font-light text-slate-500 text-sm">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
                   <a href="about.html">About us</a>
                 </li>
-                <li class="font-light text-slate-500 text-sm">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
                   <a href="contact.html">Contact us</a>
                 </li>
-                <li class="font-light text-slate-500 text-sm">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
                   <a href="blog.html">Blog</a>
                 </li>
               </ol>
             </div>
 
             <div class="">
-              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
                 Courses
               </p>
               <ol class="space-y-1">
-                <li class="font-light text-slate-500 text-sm">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
                   MERN Stack Development
                 </li>
-                <li class="font-light text-slate-500 text-sm">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
                   Flutter App Development
                 </li>
-                <li class="font-light text-slate-500 text-sm">UI UX Design</li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  UI UX Design
+                </li>
               </ol>
             </div>
 
@@ -960,26 +964,34 @@
                 class="text-[#1E1E1E] font-bold text-[18px] mb-16 hidden lg:block"
               ></p>
               <ol class="space-y-1">
-                <li class="font-light text-slate-500 text-sm">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
                   Digital Marketing
                 </li>
-                <li class="font-light text-slate-500 text-sm">Python</li>
-                <li class="font-light text-slate-500 text-sm">DevOps</li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  Python
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  DevOps
+                </li>
               </ol>
             </div>
 
             <div class="">
-              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
                 Contact us
               </p>
               <ol class="space-y-1">
                 <li class="flex gap-2">
                   <img src="./images/call.png" alt="" />
-                  <p class="font-light text-slate-500">+91 8138830876</p>
+                  <p class="font-light text-slate-500 lg:text-lg">
+                    +91 8138830876
+                  </p>
                 </li>
                 <li class="flex gap-2">
                   <img src="./images/message.png" alt="" />
-                  <p class="font-light text-slate-500 text-sm">
+                  <p class="font-light text-slate-500 text-sm lg:text-lg">
                     info@wezlon.com
                   </p>
                 </li>
@@ -989,7 +1001,7 @@
                     alt=""
                     class="h-[35px] w-[35px]"
                   />
-                  <p class="font-light text-slate-500 text-sm">
+                  <p class="font-light text-slate-500 text-sm lg:text-lg">
                     4th Floor <br />
                     Hi-Lite Business Park <br />
                     Hi-Lite Business Park
@@ -1002,26 +1014,33 @@
           <div
             class="wezgrade p-2 lg:p-4 lg:flex justify-between items-center rounded-xl"
           >
-            <p class="text-[white] rounded-lg text-center mb-1 lg:mb-0">
+            <p
+              class="text-[white] rounded-lg text-center mb-1 lg:mb-0 lg:text-lg"
+            >
               Copyright@2024 Wezlon
             </p>
 
             <div class="flex flex-row justify-center gap-1">
-              <img
-                class="btn-floating m-1 w-[35px] h-[35px]"
-                src="./images/fb.png"
-                alt=""
-              />
-              <img
-                class="btn-floating m-1 w-[35px] h-[35px]"
-                src="./images/insta.png"
-                alt=""
-              />
-              <img
-                class="btn-floating m-1 w-[35px] h-[35px]"
-                src="./images/location-icon.png"
-                alt=""
-              />
+              <a href="https://www.facebook.com/p/Wezlon-61559121857661/?locale=it_IT">
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/fb.png"
+                  alt=""
+              /></a>
+              <a href="https://www.instagram.com/wezlon_/">
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/insta.png"
+                  alt=""
+              /></a>
+              <a
+                href="https://www.linkedin.com/company/wezlon/?originalSubdomain=in"
+              >
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/location-icon.png"
+                  alt=""
+              /></a>
             </div>
           </div>
         </div>
@@ -1030,7 +1049,7 @@
 
     <dialog
       id="formDialog"
-      class="p-3 border-spacing-0 z-20 rounded-3xl w-[930px] shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]"
+      class="p-3 border-spacing-0 z-20 rounded-3xl w-[930px] shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] fixed top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]"
     >
       <div class="flex gap-7 p-1">
         <div
@@ -1086,7 +1105,7 @@
 
         <div class="w-1/2 py-5 pr-5">
           <div class="flex justify-end">
-            <button>
+            <button onclick="closeDialog()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

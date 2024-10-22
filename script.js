@@ -10,3 +10,13 @@ function menuBtnFunction(menuBtn) {
   mobileNav.hidden = !mobileNav.hidden 
 }
 
+const dialog = document.querySelector("#formDialog")
+
+const openDialog = function() {
+  dialog.showModal();
+}
+
+const closeDialog = function() {
+  dialog.close();
+}
+
