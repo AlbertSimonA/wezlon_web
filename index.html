@@ -2,444 +2,1331 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Custome meta data -->
+    <meta name="Digital Marketing Course in Calicut |wezlon" content="Looking for the best digital marketing course in Calicut? Join top-rated training programs that equip you
+    with essential skills like SEO, PPC, social media marketing, and more">
+    <meta name="Full Stack Developer Course in Calicut |wezlon" content="Become a full stack developer with expert-led courses in Calicut. Master front-end and back-end
+    development with hands-on training in popular technologies and frameworks.">
+    <meta name="Full Stack Development Courses Near Calicut |wezlon" content="Explore comprehensive full stack development courses near Calicut. Get trained in cutting-edge tools
+    and technologies for a rewarding career in web development.">
+    <meta name="Best Full Stack Developer Classes in Calicut|wezlon" content="Enroll in the best full stack developer classes in Calicut. Learn to build robust web applications with
+    expert instructors and practical projects.">
+    <meta name="Digital Marketing Classes in Calicut|wezlon" content="Find top digital marketing classes in Calicut. Learn essential online marketing techniques, including SEO,
+    social media, email marketing, and more from experienced trainers.">
+
+    <!-- For mobile Divices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Wezlon</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7C0A0A",
+              secondary: "#FF1616",
+              paraColor: "#000000",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navbar Section -->
+    <header class="py-4 px-2 bg-[white] w-full">
+      <!-- Mobile Navigation -->
+      <div class="flex justify-between lg:hidden">
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="./images/wez-logo.png"
+            alt=""
+            width="185"
+          />
+        </div>
 
-    <!-- As a link -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <div class="logo">
-            <img class="logo-img" src="./images/wez-logo.png" alt="" />
+        <div class="flex gap-3">
+          <button class="bg-secondary rounded-md px-2 text-white text-sm">
+            Enroll now
+          </button>
+          <div class="menu-btn-1" onclick="menuBtnFunction(this)">
+            <span></span>
           </div>
-          <div class="navbar-nav me-auto align-middle"></div>
-          <ul
-            class="navbar-nav me-auto mb-5 mb-lg-0 text-center"
-            style="gap: 60px; font-size: 20px"
-          >
-            <li class="nav-item me-auto mb-2 mb-lg-0" >
-              <a class="nav-link link-danger" aria-current="page" href="#"
+        </div>
+      </div>
+
+      <div
+        id="mobile-nav"
+        class="mobile-nav absolute right-0 bottom-0 h-full top-[64px] w-[265px]"
+        style="height: calc(100vh - 64px)"
+        hidden
+      >
+        <nav
+          class="bg-secondary h-full shadow-[rgba(51,10,10,1)_-8px_0px_29px_-10px]"
+        >
+          <ol class="flex direction flex-col gap-3 pt-4">
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
                 >Home</a
               >
             </li>
-            <li class="nav-item me-auto mb-2 mb-lg-0">
-              <a class="nav-link link-danger" href="#">
-                Courses</a>
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Courses</a
+              >
             </li>
-            <li class="nav-item me-auto mb-2 mb-lg-0">
-              <a class="nav-link" href="#">Blog</a>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/blog.html"
+                >Blog</a
+              >
             </li>
-            <li class="nav-item me-auto mb-2 mb-lg-0">
-              <a class="nav-link link-danger" href="#">About Us</a>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="about.html"
+                >About</a
+              >
             </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ol>
 
-            <li class="nav-item me-auto mb-2 mb-lg-0">
-              <a class="nav-link link-danger" href="#">Contact Us</a>
-            </li>
-          </ul>
-
-          <button
-            class="btn btn-danger"
-            style="width: 125px;
-            height: 48px;
-            padding: 10px;
-            border-radius: 12px;
-            opacity: 0px;
-            background:linear-gradient(236.46deg, #FF1616 -0.8%, #7C0A0A 220.92%)"
-            type="submit"
+          <div
+            class="flex flex-row-reverse absolute bottom-0 right-0 p-3 gap-2"
           >
-            Enroll Now
+            <img class="btn-floating m-1" src="./images/fb.png" alt="" />
+            <img class="btn-floating m-1" src="./images/insta.png" alt="" />
+            <img src="./images/linkedin.png" alt="" />
+          </div>
+        </nav>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="lg:flex items-center justify-between px-14 xl:gap-48 hidden">
+        <div>
+          <img src="./images/wez-logo.png" alt="" class="w-40" />
+        </div>
+        <nav>
+          <ol class="flex gap-10">
+            <a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Home</li> </a
+            ><a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Cources</li> </a
+            ><a class="navHover" href="/blog">
+              <li class="font-bold hover:text-secondary">Blog</li> </a
+            ><a class="navHover" href="/about.html">
+              <li class="font-bold hover:text-secondary">About</li> </a
+            ><a class="navHover" href="/contact.html">
+              <li class="font-bold hover:text-secondary">Contact Us</li>
+            </a>
+          </ol>
+        </nav>
+        <button onclick="openDialog()" class="wezgrade text-[white] p-3 px-6 rounded-lg text-sm">
+          Enroll now
+        </button>
+      </div>
+    </header>
+
+    <!-- banner section started -->
+    <section class="mb-12 pt-[98px] sm:mb-28">
+      <div
+        class="mb-10 flex flex-col lg:flex-row justify-center items-center lg:gap-20 lg:px-14 lg:py-12"
+      >
+        <div class="mb-6 lg:w-1/2">
+          <h1
+            class="text-4xl lg:text-6xl text-center lg:text-left font-extrabold"
+          >
+            Kerala's First <br class="lg:hidden" />
+            &
+          </h1>
+          <h2
+            class="text-4xl lg:text-6xl text-center lg:text-left font-extrabold text-secondary mb-4"
+          >
+            Largest IT Job Training Academy
+          </h2>
+          <p
+            class="text-base lg:text-xl text-center lg:text-left text-slate-500 font-light px-2"
+          >
+            At Wezlon, we believe in transforming dreams into reality. We know
+            the power of technology and how mastering it can change your life.
+            That’s why we are dedicated to empowering aspiring IT professionals
+            with the knowledge, skills, and tools needed to not just survive but
+            thrive in today’s competitive IT world.
+          </p>
+        </div>
+
+        <div class="px-4 lg:w-1/2">
+          <img
+            class="ban-img img-fluid w-full"
+            src="./images/banner-img.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- achievment section -->
+      <div class="wezgrade p-4 shadow-[rgba(255,0,0,1)_0px_35px_101px_-28px]">
+        <div
+          class="grid grid-cols-2 lg:grid-cols-4 gap-y-6 text-center text-white"
+        >
+          <div>
+            <h1 class="text-xl lg:text-4xl font-bold">150+</h1>
+            <p class="text-lg">Students</p>
+          </div>
+          <div>
+            <h1 class="text-xl lg:text-4xl font-bold">32+</h1>
+            <p class="text-lg">Placements</p>
+          </div>
+          <div>
+            <h1 class="text-xl lg:text-4xl font-bold">32+</h1>
+            <p class="text-lg">Placements</p>
+          </div>
+          <div>
+            <h1 class="text-xl lg:text-4xl font-bold">99%</h1>
+            <p class="text-lg">Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- banner section end -->
+
+    <section class="mb-14">
+      <div class="my-4 px-4 lg:px-12">
+        <div class="my-4 mb-10">
+          <button
+            class="px-4 py-2 mb-4 text-secondary rounded-full border border-secondary cursor-auto"
+          >
+            Roadmap
+          </button>
+          <h3 class="text-xl font-bold lg:font-extrabold lg:text-4xl">
+            Course progression and key milestones
+          </h3>
+        </div>
+
+        <div class="container courses md:hidden">
+          <div class="flex flex-col gap-4">
+            <div class="flex justify-between items-center gap-4 w-full">
+              <div
+                class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
+              >
+                <div
+                  class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary"
+                >
+                  1
+                </div>
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-secondary text-xl font-extrabold">
+                  Daily Typing Practice
+                </h4>
+                <p class="text-sm">
+                  Boost your speed and accuracy with daily typing exercises,
+                  helping you build confidence and proficiency for your IT
+                  career.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center gap-4 w-full">
+              <div
+                class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
+              >
+                <div
+                  class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary"
+                >
+                  2
+                </div>
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-secondary text-xl font-extrabold">
+                  Weekly Reviews by Experts
+                </h4>
+                <p class="text-sm">
+                  Receive expert feedback and personalized guidance in weekly
+                  sessions, ensuring you stay on track and sharpen your skills.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center gap-4 w-full">
+              <div
+                class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
+              >
+                <div
+                  class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary"
+                >
+                  3
+                </div>
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-secondary text-xl font-extrabold">
+                  Weekly Review with Industry Experts
+                </h4>
+                <p class="text-sm">
+                  By the end of the course, you'll earn a job-ready
+                  certification recognized by top companies, gaining hands-on
+                  experience, refined communication skills, and expert guidance
+                  to confidently enter the IT field.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center gap-4 w-full">
+              <div
+                class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
+              >
+                <div
+                  class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary"
+                >
+                  4
+                </div>
+              </div>
+              <div class="flex-grow">
+                <h4 class="text-secondary text-xl font-extrabold">
+                  Achieving Job-Ready Certification
+                </h4>
+                <p class="text-sm">
+                  By the end of the course, you'll earn a job-ready
+                  certification recognized by top companies, gaining hands-on
+                  experience, refined communication skills, and expert guidance
+                  to confidently enter the IT field.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Roadmap ⭐⭐⭐ 🛣️🛣️🛣️ ⭐⭐⭐ -->
+      <div class="hidden lg:block relative -z-10">
+        <img
+          src="./images/birds.svg"
+          alt=""
+          class="absolute right-24 -top-16 h-32"
+        />
+
+        <div
+          class="flex justify-between items-center gap-4 w-96 absolute top-24 right-36 xl:right-14 xl:w-[30rem] 2xl:w-[32rem]"
+        >
+          <div
+            class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
+          >
+            <div
+              class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary"
+            >
+              1
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h4 class="text-secondary text-xl font-extrabold">
+              Daily Typing Practice
+            </h4>
+            <p class="text-sm">
+              Boost your speed and accuracy with daily typing exercises, helping
+              you build confidence and proficiency for your IT career.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-between items-center gap-4 w-96 absolute top-60 left-8"
+        >
+          <div
+            class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
+          >
+            <div
+              class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary"
+            >
+              2
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h4 class="text-secondary text-xl font-extrabold">
+              Daily English Section
+            </h4>
+            <p class="text-sm">
+              Improve your speaking, writing, and comprehension with daily
+              English classes designed to enhance communication in professional
+              environments
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-between items-center gap-4 w-96 absolute top-[23rem] right-36 xl:w-[30rem] 2xl:w-[32rem] xl:right-14"
+        >
+          <div
+            class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
+          >
+            <div
+              class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary"
+            >
+              3
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h4 class="text-secondary text-xl font-extrabold">
+              Weekly Review with Industry Experts
+            </h4>
+            <p class="text-sm">
+              Receive expert feedback and personalized guidance in weekly
+              sessions, ensuring you stay on track and sharpen your skills.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-between items-center gap-4 w-96 absolute top-[30rem] left-8"
+        >
+          <div
+            class="flex items-center justify-center bg-secondary h-20 w-20 rounded-full flex-shrink-0"
+          >
+            <div
+              class="bg-[white] h-12 w-12 rounded-full text-center content-center text-2xl font-extrabold text-secondary"
+            >
+              4
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h4 class="text-secondary text-xl font-extrabold">
+              Achieving Job-Ready Certification
+            </h4>
+            <p class="text-sm">
+              By the end of the course, you'll earn a job-ready certification
+              recognized by top companies, gaining hands-on experience, refined
+              communication skills, and expert guidance to confidently enter the
+              IT field.
+            </p>
+          </div>
+        </div>
+
+        <div class="svg">
+          <svg
+            class="w-full"
+            height="678"
+            viewBox="0 0 1740 678"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 25.5H914.25C957.742 25.5 993 60.7576 993 104.25V104.25C993 147.742 957.742 183 914.25 183H563.25C517.548 183 480.5 220.048 480.5 265.75V265.75C480.5 311.452 517.548 348.5 563.25 348.5H919.75C960.205 348.5 993 381.295 993 421.75V421.75C993 462.205 960.205 495 919.75 495H559C515.646 495 480.5 530.146 480.5 573.5V573.5C480.5 616.854 515.646 652 559 652H1740"
+              stroke="url(#paint0_linear_46_23685)"
+              stroke-width="51"
+            />
+            <path
+              d="M0 25.5H914.25C957.742 25.5 993 60.7576 993 104.25V104.25C993 147.742 957.742 183 914.25 183H563.25C517.548 183 480.5 220.048 480.5 265.75V265.75C480.5 311.452 517.548 348.5 563.25 348.5H919.75C960.205 348.5 993 381.295 993 421.75V421.75C993 462.205 960.205 495 919.75 495H559C515.646 495 480.5 530.146 480.5 573.5V573.5C480.5 616.854 515.646 652 559 652H1740"
+              stroke="white"
+              stroke-width="2"
+              stroke-dasharray="16 16"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_46_23685"
+                x1="389.566"
+                y1="58.0897"
+                x2="1237.02"
+                y2="58.0897"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#FF1616" />
+                <stop offset="1" stop-color="#7C0A0A" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 lg:px-24 mb-12">
+      <div class="">
+        <div class="my-4 lg:mb-12">
+          <button
+            class="px-4 py-2 mb-4 text-secondary rounded-full border border-secondary cursor-auto"
+          >
+            Courses
+          </button>
+          <h3 class="text-xl font-bold lg:font-extrabold lg:text-4xl">
+            Select the domain of your choice
+          </h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+          <div class="p-2 lg:p-4 rounded-lg w-full wezboxShadow">
+            <div class="flex items-center justify-between gap-2 md:gap-5 mb-2">
+              <!-- <img src="images/mern.png" alt="" class="h-20"> -->
+              <div
+                class="h-16 w-16 wezgrade rounded-lg flex items-center justify-center flex-shrink-0"
+              >
+                <img
+                  src="./images/mernlcon.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                />
+              </div>
+              <div>
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">
+                  MERN Stack Development
+                </h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
+                  Unveil the robust architecture of full-stack JavaScript, where
+                  MongoDB, Express, React, and Node.js converge to create
+                  cutting-edge web applications.
+                </p>
+              </div>
+
+              <button class="border-red-600 p-2 rounded-full border">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-secondary"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p class="sm:hidden text-sm text-slate-500">
+              – Unveil the robust architecture of full-stack JavaScript, where
+              MongoDB, Express, React, and Node.js converge to create
+              cutting-edge web applications.
+            </p>
+          </div>
+
+          <div class="p-2 lg:p-5 rounded-lg wezboxShadow">
+            <div
+              class="flex items-center justify-between gap-2 md:gap-5 mb-2 sm:mb-0"
+            >
+              <!-- <img src="images/mern.png" alt="" class="h-20"> -->
+              <div
+                class="h-16 w-16 wezgrade rounded-lg flex items-center justify-center flex-shrink-0"
+              >
+                <img
+                  src="./images/fluttericon.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                />
+              </div>
+              <div>
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">
+                  Flutter App Development
+                </h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
+                  Immerse yourself in the art of crafting cross-platform mobile
+                  experiences, leveraging the power of Google's versatile UI
+                  toolkit for iOS and Android.
+                </p>
+              </div>
+
+              <button class="border-red-600 p-2 rounded-full border">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-secondary"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p class="sm:hidden text-sm text-slate-500">
+              Immerse yourself in the art of crafting cross-platform mobile
+              experiences, leveraging the power of Google's versatile UI toolkit
+              for iOS and Android.
+            </p>
+          </div>
+
+          <div class="p-2 lg:p-5 rounded-lg wezboxShadow">
+            <div
+              class="flex items-center justify-between gap-2 md:gap-5 mb-2 sm:mb-0"
+            >
+              <!-- <img src="images/mern.png" alt="" class="h-20"> -->
+              <div
+                class="h-16 w-16 wezgrade rounded-lg flex items-center justify-center flex-shrink-0"
+              >
+                <img
+                  src="./images/uiuxicon.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                />
+              </div>
+              <div>
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">
+                  UI UX Design
+                </h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
+                  Shape the digital landscapes through a blend of creativity and
+                  analytical design thinking, ensuring intuitive and engaging
+                  user interactions
+                </p>
+              </div>
+
+              <button class="border-red-600 p-2 rounded-full border">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-secondary"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p class="sm:hidden text-sm text-slate-500">
+              Shape the digital landscapes through a blend of creativity and
+              analytical design thinking, ensuring intuitive and engaging user
+              interactions
+            </p>
+          </div>
+
+          <div class="p-2 lg:p-5 rounded-lg wezboxShadow">
+            <div
+              class="flex items-center justify-between gap-2 md:gap-5 mb-2 sm:mb-0"
+            >
+              <!-- <img src="images/mern.png" alt="" class="h-20"> -->
+              <div
+                class="h-16 w-16 wezgrade rounded-lg flex items-center justify-center flex-shrink-0"
+              >
+                <img
+                  src="./images/dMarketingIcon.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                />
+              </div>
+              <div>
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">
+                  Digital Marketing
+                </h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
+                  Master the strategies of driving online visibility, harnessing
+                  the forces of SEO, SEM, and data-driven campaigns to amplify
+                  brand presence in the digital age.
+                </p>
+              </div>
+
+              <button class="border-red-600 p-2 rounded-full border">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-secondary"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p class="sm:hidden text-sm text-slate-500">
+              Master the strategies of driving online visibility, harnessing the
+              forces of SEO, SEM, and data-driven campaigns to amplify brand
+              presence in the digital age.
+            </p>
+          </div>
+
+          <div class="p-2 lg:p-5 rounded-lg wezboxShadow">
+            <div
+              class="flex items-center justify-between gap-2 md:gap-5 mb-2 sm:mb-0"
+            >
+              <!-- <img src="images/mern.png" alt="" class="h-20"> -->
+              <div
+                class="h-16 w-16 wezgrade rounded-lg flex items-center justify-center flex-shrink-0"
+              >
+                <img
+                  src="./images/pythonIcon.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                />
+              </div>
+              <div>
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">Python</h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
+                  Explore the elegance and simplicity of this versatile
+                  programming language, known for its powerful libraries in data
+                  science, machine learning, and beyond.
+                </p>
+              </div>
+
+              <button class="border-red-600 p-2 rounded-full border">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-secondary"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p class="sm:hidden text-sm text-slate-500">
+              Explore the elegance and simplicity of this versatile programming
+              language, known for its powerful libraries in data science,
+              machine learning, and beyond.
+            </p>
+          </div>
+
+          <div class="p-2 lg:p-5 rounded-lg wezboxShadow">
+            <div
+              class="flex items-center justify-between gap-2 md:gap-5 mb-2 sm:mb-0"
+            >
+              <!-- <img src="images/mern.png" alt="" class="h-20"> -->
+              <div
+                class="h-16 w-16 wezgrade rounded-lg flex items-center justify-center flex-shrink-0"
+              >
+                <img
+                  src="./images/devOpsIcon.svg"
+                  alt=""
+                  width="32"
+                  height="32"
+                />
+              </div>
+              <div>
+                <h1 class="text-lg font-bold xs:w-auto lg:text-xl">DevOps</h1>
+                <p class="hidden sm:block text-sm text-slate-500 lg:text-base">
+                  Bridge the gap between development and operations, fostering a
+                  culture of continuous integration, automation, and
+                  collaborative workflows to accelerate software delivery.
+                </p>
+              </div>
+
+              <button class="border-red-600 p-2 rounded-full border">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-secondary"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p class="sm:hidden text-sm text-slate-500">
+              Bridge the gap between development and operations, fostering a
+              culture of continuous integration, automation, and collaborative
+              workflows to accelerate software delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="px-4 lg:px-24 mb-12">
+      <div class="block md:flex mb-6 lg:mb-12 items-end justify-between">
+        <div class="my-4">
+          <button
+            class="px-4 py-2 mb-4 text-secondary rounded-full border border-secondary cursor-auto"
+          >
+            Testimonial
+          </button>
+          <h3 class="text-xl font-bold lg:font-extrabold lg:text-4xl">
+            Hear from our students
+          </h3>
+        </div>
+
+        <div class="flex gap-2">
+          <button
+            class="p-3 lg:p-4 text-secondary bg-[#F7F7F7] rounded-lg lg:rounded-2xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="md:size-6 size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 19.5-15-15m0 0v11.25m0-11.25h11.25"
+              />
+            </svg>
+          </button>
+          <button
+            class="p-3 lg:p-4 text-white wezgrade rounded-lg lg:rounded-2xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="md:size-6 size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
           </button>
         </div>
       </div>
-    </nav>
-    <!-- navbar ending -->
 
-    <!-- banner section started -->
-
-    <div class="main-banner container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="banner-text">
-                    <h1>Kerala's First & </h1>
-                    <h2>Largest IT Job Training Academy</h2>
-                   <p>
-                    At Wezlon, we believe in transforming dreams into reality. <br>
-                     We know the power of technology and how mastering it can change your life. <br>
-                      That’s why we are dedicated to empowering aspiring IT professionals with the knowledge, <br>
-                       skills, and tools needed to not just survive but thrive in today’s competitive IT world.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 text-center">
-                <img class="ban-img img-fluid" src="./images/banner-img.png" alt="">
-            </div>
-        </div>
-    </div>
-    
-    <!-- banner section end -->
-
-    <!-- achievment section -->
-    <div class="achievement">
-        <div class="row text-center">
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="achievement-item">
-                    <h1>150+</h1>
-                    <p>Students</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="achievement-item">
-                    <h1>32+</h1>
-                    <p>Placements</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="achievement-item">
-                    <h1>32+</h1>
-                    <p>Placements</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
-                <div class="achievement-item">
-                    <h1>99%</h1>
-                    <p>Satisfaction</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- achievment section end -->
-
-    <!-- Road-map section start -->
-
-    <!-- <div class="container">
-
-      <div class="my-4">
-        <button class="btn btn-outline-danger course-btn">Courses</button>
-        <h3 style=" font-size: 30px; margin-top: 15px;">Select the domain of your choice</h3>
-    </div>
-    <div class="road-map">
-     <div class="roadmap-contents" style="display: flex;">
-      <div class="imgs" style="display: flex;">
-        <img src="./images/signal.png" alt="">
-      <img src="./images/cycle.png" alt="">
-      <img style="justify-content: end; align-items: fle;" src="./images/birds.png" alt="">
-      </div>
-
-
-     </div>
-
-    </div>
-    </div> -->
-
-    <!-- Road-map section end -->
-
-     <!-- providing courses -->
-      <div class="container courses">
-        <div class="my-4">
-            <button class="btn btn-outline-danger course-btn">Courses</button>
-            <h3>Select the domain of your choice</h3>
-        </div>
-        
-        <div class="course-section">
-            <div class="row course-container">
-                <div class="col-lg-6 col-md-12 mt-12 course-container1">
-                    <div class="course d-flex p-3 shadow-lg">
-                        <img src="./images/mern.png" alt="">
-                        <div class="course-text ms-3">
-                            <h3>MERN Stack Development</h3>
-                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
-                        </div>
-                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
-                    </div>
-                </div>
-    
-                <div class="col-lg-6 col-md-12 mt-12 course-container1">
-                    <div class="course d-flex p-3 shadow-lg mt-12">
-                        <img src="./images/flutter.png" alt="" class="img-fluid">
-                        <div class="course-text ms-3">
-                            <h3>Flutter App Development</h3>
-                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                            Vivamus lacinia odio vitae vestibulum.Curbitur vitae</p>
-                        </div>
-                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto"> 
-                    </div>
-                </div> 
-    
-                <div class="col-lg-6 col-md-12 mt-12 course-container1">
-                    <div class="course d-flex p-3 shadow-lg mt-12">
-                        <img src="./images/ui ux.png" alt="" class="img-fluid">
-                        <div class="course-text ms-3">
-                            <h3>UI UX Design</h3>
-                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
-                        </div>
-                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
-                    </div>
-                </div>
-    
-                <div class="col-lg-6 col-md-12 mb-12 course-container1">
-                    <div class="course d-flex p-3 shadow-md mt-12">
-                        <img src="./images/dm.png" alt="" class="img-fluid">
-                        <div class="course-text ms-3">
-                            <h3>Digital Marketing</h3>
-                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
-                        </div>
-                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
-                    </div>
-                </div>
-    
-                <div class="col-lg-6 col-md-12 mb-12 course-container1">
-                    <div class="course d-flex p-3 shadow-lg mt-12">
-                        <img src="./images/python.png" alt="" class="img-fluid">
-                        <div class="course-text ms-3">
-                            <h3>Python</h3>
-                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
-                        </div>
-                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
-                    </div>
-                </div>
-    
-                <div class="col-lg-6 col-md-12 mb-12 course-container1">
-                    <div class="course d-flex p-3 shadow-lg mt-12">
-                        <img src="./images/devops.png" alt="" class="img-fluid">
-                        <div class="course-text ms-3">
-                            <h3>DevOps</h3>
-                            <p>Lorem ipsum sit amet. consectetur adipiscing elit <br>
-                            Vivamus lacinia odio vitae vestibulum. Curbitur vitae</p>
-                        </div>
-                        <img src="./images/arrow.png" alt="" class="img-fluid ms-auto">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Testimonial Section start -->
-
-   
-   <div class="container testimonial">
-    <div class="my-4">
-      <button class="btn btn-outline-danger course-btn">Courses</button>
-      <h3 style="    font-size: 30px;
-      margin-top: 15px;
-  ">Select the domain of your choice</h3>
-
-  </div>
-
-  <div style="display: flex; justify-content: space-between; gap: 8px; margin-top: 130px;" class="col-md-auto container-fluid">
-  <div class="mainBox" style="height: 332px; border-radius: 32px; background-color: rgba(239, 239, 239, 1); padding: 8px; display: flex; justify-content: flex-end; position: relative; width: 100%;">
-    <div class="imgBox" style="position: absolute; left: 8px; top: -68px;" >
-      <img class="" src="./images/people2.png" alt="" height="402">
-    </div>
-
-    <div class=" tectBox" style="width: 315px; border-radius: 25px; background-color: white; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-      <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Curabitur vitae</p>  
-      <hr style="color: rgba(217, 217, 217, 1);">
-      <h3>Warren Anderson</h3>
-      <p>MERN Stack Development</p>
-    </div>
-  </div>
-  <div class="mainBox" style="height: 332px; border-radius: 32px; background-color: rgba(239, 239, 239, 1); padding: 8px; display: flex; justify-content: flex-end; position: relative; width: 100%;">
-    <div class="imgBox" style="position: absolute; left: 8px; top: -68px;" >
-      <img class="" src="./images/people2.png" alt="" height="402">
-    </div>
-
-    <div class="tectBox" style="width: 315px; border-radius: 25px; background-color: white; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-      <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Curabitur vitae</p>  
-      <hr style="color: rgba(217, 217, 217, 1);">
-      <h5>Warren Anderson</h5>
-      <p>MERN Stack Development</p>
-    </div>
-  </div>
-</div>
-   </div>
-
-   
-
-
-  <!-- Card Section -->
-
-  
-
-
-
-    <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="footer container my-5">
-  <!-- Footer -->
-  <footer
-          class="text-center ml-5 text-lg-start "
-          
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div
+          class="flex lg:justify-end flex-row lg:flex-col items-end p-2 bg-[#efefef] w-full h-[31rem] lg:h-auto rounded-3xl relative mt-20 -z-10"
+        >
+          <img
+            class="absolute h-[23rem] lg:h-[25rem] top-[-5.6rem] lg:top-[-5.9rem] left-[50%] -translate-x-1/2 lg:left-[47px] lg:translate-x-0"
+            src="./images/people1.png"
+            alt=""
+          />
+          <div
+            class="p-8 bg-white w-full lg:w-80 rounded-3xl h-[210px] lg:h-full"
           >
-    <!-- Grid container --> 
-    <div class="container p-4 pb-0 shadow-lg">
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row rounded-lg">
-          <!-- Grid column -->
-          <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mt-3 ">
-            <!-- <h6 class="text-uppercase mb-4 font-weight-bold">
-              Company name
-            </h6> -->
-            <img src="./images/wez-logo.png" alt="">
-            <p class="mt-5">
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
+            <p class="text-slate-500 text-center text-sm mb-4 lg:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              lacinia odio vitae vestibulum. Curabitur vitae Vivamus lacinia
+              odio vitae vestibulum. Curabitur vitae
             </p>
+            <hr class="mb-4" />
+            <p class="text-lg text-center font-semibold lg:text-xl">
+              Warren Anderson
+            </p>
+            <p class="text-xs text-center lg:text-sm">MERN Stack Developer</p>
           </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Links</h6>
-            <p>
-              About us
-            </p>
-            <p>
-              Contact us
-            </p>
-            <p>
-              Blog
-            </p>
-           
-          </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
-             Courses
-            </h6>
-            
-            <p>
-              Mern Stack Development
-            </p>
-            <p>
-              Flutter App Development
-            </p>
-            <p>
-              UI UX Design
-            </p>
-          </div>
-
-          <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none" />
-
-           <!-- Grid column -->
-           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-5">
-            <!-- <h6 class="text-uppercase mb-4 font-weight-bold">
-              Useful links
-            </h6> -->
-            <p>
-              Digital Marketing
-            </p>
-            <p>
-              Python
-            </p>
-            <p>
-              DevOps
-            </p>
-           
-          </div>
-
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Contact us</h6>
-            <p><i class="fas fa-phone mr-3"></i> +91 8138830876</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@wezlon.com</p>
-            <p><i class="fas fa-home mr-3"></i>7th Floor <br>
-            Hi-Lite Business Park <br> Calicut-673617</p>
-          </div>
-          <!-- Grid column -->
         </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
 
-      <hr class="my-3">
+        <div
+          class="flex lg:justify-end flex-row lg:flex-col items-end p-2 bg-[#efefef] w-full h-[31rem] lg:h-auto rounded-3xl relative mt-20 -z-10"
+        >
+          <img
+            class="absolute h-[23rem] lg:h-[25rem] top-[-5.6rem] lg:top-[-5.9rem] left-[50%] -translate-x-1/2 lg:left-[47px] lg:translate-x-0"
+            src="./images/people2.png"
+            alt=""
+          />
+          <div
+            class="p-8 bg-white w-full lg:w-80 rounded-3xl h-[210px] lg:h-full"
+          >
+            <p class="text-slate-500 text-center text-sm mb-4 lg:text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              lacinia odio vitae vestibulum. Curabitur vitae Vivamus lacinia
+              odio vitae vestibulum. Curabitur vitae
+            </p>
+            <hr class="mb-4" />
+            <p class="text-lg text-center font-semibold lg:text-xl">
+              Warren Anderson
+            </p>
+            <p class="text-xs text-center lg:text-sm">Flutter Developer</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-      <!-- Section: Copyright -->
-      <section class="p-3 pt-0">
-        <div class="copyright d-flex align-items-center">
-          <!-- Grid column -->
-          <div class="col-md-7 col-lg-8 text-center text-md-start">
-            <!-- Copyright -->
-            <div class="p-3 text-white" >
-              Copyright@2024 Wezlon <a class="text-white" href="/privacypolicy.html">Privacy Policy</a>
-              <!-- <a class="text-white" href="https://mdbootstrap.com/"
-                 >MDBootstrap.com</a
-                > -->
-               
+    <section class="px-4 lg:px-20 mb-12">
+      <div
+        class="wezboxShadow lg:flex items-center gap-14 rounded-3xl py-5 px-14"
+      >
+        <img src="./images/hireimg.png" alt="" class="w-[280px]" />
+        <div>
+          <h1
+            class="text-4xl text-center lg:text-left lg:text-6xl font-extrabold mb-3"
+          >
+            Hire from <span class="text-secondary"> Wezlon ?</span>
+          </h1>
+          <p class="text-sm text-slate-500 mb-3 lg:text-lg">
+            Wezlon is an IT job training academy that equips learners with
+            practical skills and knowledge for a successful career in the tech
+            industry. Our programs focus on hands-on learning, industry-relevant
+            tools, and real-world applications, helping students excel in the
+            fast-growing field of information technology.
+          </p>
+          <button
+            class="px-5 py-2 flex items-center gap-2 text-white wezgrade rounded-md lg:text-lg"
+            onclick="openContactDialog()"
+          >
+            Contact us now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-24">
+      <div class="pb-11 p-6 lg:px-12">
+        <div
+          class="footerdiv wezboxShadow rounded-3xl p-7 lg:p-11 lg:w-[100%] bg-[white]"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-[30%_10%_16%_10%_20%] gap-10 mb-6"
+          >
+            <div class="">
+              <img src="./images/wez-logo.png" alt="" class="mb-6" />
+
+              <p class="mb-4 font-light text-slate-500 text-sm lg:text-lg">
+                Wezlon IT Job Training Academy in Kerala offers urgent,
+                industry-focused training programs designed to equip individuals
+                with the skills required for immediate job placement in the IT
+                sector.
+              </p>
+
+              <button
+                class="border-2 border-[#FF1616] rounded-md p-5 py-2 text-secondary lg:text-lg"
+                onclick="openDialog()"
+              >
+                Enroll now
+              </button>
             </div>
-            
-            <!-- Copyright -->
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
+                Links
+              </p>
+
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  <a href="about.html">About us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  <a href="contact.html">Contact us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  <a href="blog.html">Blog</a>
+                </li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
+                Courses
+              </p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  MERN Stack Development
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  Flutter App Development
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  UI UX Design
+                </li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-16 hidden lg:block"
+              ></p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  Digital Marketing
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  Python
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  DevOps
+                </li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
+                Contact us
+              </p>
+              <ol class="space-y-1">
+                <li class="flex gap-2">
+                  <img src="./images/call.png" alt="" />
+                  <p class="font-light text-slate-500 lg:text-lg">
+                    +91 8138830876
+                  </p>
+                </li>
+                <li class="flex gap-2">
+                  <img src="./images/message.png" alt="" />
+                  <p class="font-light text-slate-500 text-sm lg:text-lg">
+                    info@wezlon.com
+                  </p>
+                </li>
+                <li class="flex gap-2">
+                  <img
+                    src="./images/location.png"
+                    alt=""
+                    class="h-[35px] w-[35px]"
+                  />
+                  <p class="font-light text-slate-500 text-sm lg:text-lg">
+                    4th Floor <br />
+                    Hi-Lite Business Park <br />
+                    Hi-Lite Business Park
+                  </p>
+                </li>
+              </ol>
+            </div>
           </div>
-          <!-- Grid column -->
 
-          <!-- Grid column -->
-          <div class="col-md-5 col-lg-4 ml-lg-0 text-center p-3 text-md-end">
-            <!-- Facebook -->
-           <img  class=" btn-floating m-1" src="./images/fb.png" alt="">
+          <div
+            class="wezgrade p-2 lg:p-4 lg:flex justify-between items-center rounded-xl"
+          >
+            <p
+              class="text-[white] rounded-lg text-center mb-1 lg:mb-0 lg:text-lg"
+            >
+              Copyright@2024 Wezlon
+            </p>
 
-            <!-- Instagram -->
-            <img  class=" btn-floating m-1" src="./images/insta.png" alt="">
-            <!-- Linkedin -->
-           <img src="./images/linkedin.png" alt="">
-
-            
-           
+            <div class="flex flex-row justify-center gap-1">
+              <a href="https://www.facebook.com/p/Wezlon-61559121857661/?locale=it_IT">
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/fb.png"
+                  alt=""
+              /></a>
+              <a href="https://www.instagram.com/wezlon_/">
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/insta.png"
+                  alt=""
+              /></a>
+              <a
+                href="https://www.linkedin.com/company/wezlon/?originalSubdomain=in"
+              >
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/location-icon.png"
+                  alt=""
+              /></a>
+            </div>
           </div>
-          <!-- Grid column -->
         </div>
-      </section>
-      <!-- Section: Copyright -->
-    </div>
-    <!-- Grid container -->
-  </footer>
-  <!-- Footer -->
-</div>
-<!-- End of .container -->
-   
-    
+      </div>
+    </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <dialog
+      id="formDialog"
+      class="p-3 border-spacing-0 z-20 rounded-3xl w-[930px] shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] fixed top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]"
+    >
+      <div class="flex gap-7 p-1">
+        <div
+          class="bg-[#F2F4F8] py-5 px-3 rounded-md w-1/2 flex flex-col gap-8"
+        >
+          <img
+            class="h-7 inline-block w-40"
+            src="./images/wez-logo.png"
+            alt=""
+          />
+          <h4 class="text-2xl font-semibold">
+            Help us get you started in a new beginning in your career
+          </h4>
+          <p class="text-slate-500 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula
+            suscipit aliquet.
+          </p>
+
+          <div>
+            <div class="bg-white rounded-md px-4 py-6 pt-8 mb-4 relative">
+              <p class="text-md mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula
+                suscipit aliquet.
+              </p>
+              <div class="flex gap-3">
+                <img src="./images/profile.png" alt="" class="h-12" />
+                <div>
+                  <p class="text-md font-semibold">Angel John</p>
+                  <p class="text-sm">MERN Stack Developer</p>
+                </div>
+              </div>
+              <img
+                class="h-14 absolute top-0 left-2"
+                src="./images/coma2.png"
+                alt=""
+              />
+              <img
+                class="h-14 absolute bottom-12 right-4"
+                src="images/coma1.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex justify-center gap-2">
+              <div class="h-3 w-3 bg-secondary rounded-full"></div>
+              <div class="h-3 w-3 bg-slate-300 rounded-full"></div>
+              <div class="h-3 w-3 bg-slate-300 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/2 py-5 pr-5">
+          <div class="flex justify-end">
+            <button onclick="closeDialog()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <h4 class="text-2xl font-semibold">Get started</h4>
+          <p class="text-slate-500 mb-5">
+            Fill the following details and we will reach you.
+          </p>
+
+          <form action="" class="flex flex-col gap-3">
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600"> Name </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600"> Email </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600">
+                Phone Number
+              </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600"> Course </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+
+            <button
+              class="text-white font-medium w-full py-3 rounded-lg wezgrade"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog
+      id="hireDialog"
+      class="p-3 border-spacing-0 z-20 rounded-3xl w-[930px] shadow-[rgba(0,0,15,0.5)_0px_4px_20px_0px] fixed top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]"
+    >
+      <div class="flex gap-7 p-1">
+        <div
+          class="bg-[#F2F4F8] py-5 px-3 rounded-md w-1/2 flex flex-col gap-8"
+        >
+          <img
+            class="h-7 inline-block w-40"
+            src="./images/wez-logo.png"
+            alt=""
+          />
+          <h4 class="text-2xl font-bold">
+            Choose from the tremendous talent pool at
+            <span class="text-secondary">Wezlon</span>
+          </h4>
+          <p class="text-slate-500 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula
+            suscipit aliquet.
+          </p>
+
+          <div>
+            <div class="bg-white rounded-md px-4 py-6 pt-8 mb-4 relative">
+              <p class="text-md mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula
+                suscipit aliquet.
+              </p>
+              <div class="flex gap-3">
+                <img src="./images/profile.png" alt="" class="h-12" />
+                <div>
+                  <p class="text-md font-semibold">Angel John</p>
+                  <p class="text-sm">MERN Stack Developer</p>
+                </div>
+              </div>
+              <img
+                class="h-14 absolute top-0 left-2"
+                src="./images/coma2.png"
+                alt=""
+              />
+              <img
+                class="h-14 absolute bottom-12 right-4"
+                src="images/coma1.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex justify-center gap-2">
+              <div class="h-3 w-3 bg-secondary rounded-full"></div>
+              <div class="h-3 w-3 bg-slate-300 rounded-full"></div>
+              <div class="h-3 w-3 bg-slate-300 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/2 py-5 pr-5">
+          <div class="flex justify-end">
+            <button onclick="closeContactDialog()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <h4 class="text-2xl font-semibold">Hire from us</h4>
+          <p class="text-slate-500 mb-5">
+            Fill the following details and we will reach you.
+          </p>
+
+          <form action="" class="flex flex-col gap-3">
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600"> Name </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600"> Email </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600">
+                Phone Number
+              </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600">
+                Company Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+
+            <button
+              class="text-white font-medium w-full py-3 rounded-lg wezgrade"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./script.js"></script>
   </body>
 </html>

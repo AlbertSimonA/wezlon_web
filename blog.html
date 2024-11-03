@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wezlon | Blog</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7C0A0A",
+              secondary: "#FF1616",
+              paraColor: "#000000",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header
+      class="py-4 px-2 shadow-[rgba(0,0,5,0.2)_0px_4px_20px_0px] fixed bg-[white] w-full z-10"
+    >
+      <!-- Mobile Navigation -->
+      <div class="flex justify-between lg:hidden">
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="./images/wez-logo.png"
+            alt=""
+            width="185"
+          />
+        </div>
+
+        <div class="flex gap-3">
+          <button class="bg-secondary rounded-md px-2 text-white text-sm">
+            Enroll now
+          </button>
+          <div class="menu-btn-1" onclick="menuBtnFunction(this)">
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-nav"
+        class="mobile-nav absolute right-0 bottom-0 h-full top-[64px] w-[265px]"
+        style="height: calc(100vh - 64px)"
+        hidden
+      >
+        <nav
+          class="bg-secondary h-full shadow-[rgba(51,10,10,1)_-8px_0px_29px_-10px]"
+        >
+          <ol class="flex direction flex-col gap-3 pt-4">
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/blog.html"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ol>
+
+          <div
+            class="flex flex-row-reverse absolute bottom-0 right-0 p-3 gap-2"
+          >
+            <img class="btn-floating m-1" src="./images/fb.png" alt="" />
+            <img class="btn-floating m-1" src="./images/insta.png" alt="" />
+            <img src="./images/linkedin.png" alt="" />
+          </div>
+        </nav>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="lg:flex items-center justify-center gap-36 xl:gap-48 hidden">
+        <div>
+          <img src="./images/wez-logo.png" alt="" class="w-40" />
+        </div>
+        <nav>
+          <ol class="flex gap-10">
+            <a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Home</li> </a
+            ><a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Cources</li> </a
+            ><a class="navHover" href="/blog.html">
+              <li class="font-bold hover:text-secondary">Blog</li> </a
+            ><a class="navHover" href="/about.html">
+              <li class="font-bold hover:text-secondary">About</li> </a
+            ><a class="navHover" href="/contact.html">
+              <li class="font-bold hover:text-secondary">Contact Us</li>
+            </a>
+          </ol>
+        </nav>
+        <button class="wezgrade text-[white] p-3 px-6 rounded-lg text-sm">
+          Enroll now
+        </button>
+      </div>
+    </header>
+
+
+    <section class="p-3 md:p-10 h-lvh pt-[98px]">
+      <div
+        class="h-full bg-cover bg-no-repeat rounded-2xl p-14 flex items-end"
+        style="background-image: url(./images/blogBanner.jpg)"
+      >
+        <div class="w-full">
+          <h1 class="text-white text-lg">Featured</h1>
+          <div class="flex justify-between items-center">
+            <div>
+              <h2 class="text-white text-5xl font-bold">
+                Breaking into product design :
+              </h2>
+              <h2 class="text-white text-5xl font-bold">
+                Advice from an untitled founder, Frank
+              </h2>
+            </div>
+            <button>
+              <img src="images/Vector.png" alt="" class="h-11" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-10 py-5">
+      <p class="text-2xl font-bold mb-6">Recent blog posts</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="flex flex-col gap-2">
+          <img src="images/blog1.jpg" alt="" class="rounded-xl" />
+          <h3 class="text-xl font-bold">Migrating to new technology</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="flex items-center gap-2">
+            <img class="h-9 w-9" src="images/profile.png" alt="" />
+            <p class="font-bold flex items-center gap-2">
+              Jonathan Wills
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="black"
+                  class="h-2 w-2 rounded-full"
+                >
+                  <circle cx="8" cy="8" r="12" />
+                </svg>
+              </span>
+              19 Jan 2024
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <img src="images/blog2.jpg" alt="" class="rounded-xl" />
+          <h3 class="text-xl font-bold">Migrating to new technology</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="flex items-center gap-2">
+            <img class="h-9 w-9" src="images/profile.png" alt="" />
+            <p class="font-bold flex items-center gap-2">
+              Jonathan Wills
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="black"
+                  class="h-2 w-2 rounded-full"
+                >
+                  <circle cx="8" cy="8" r="12" />
+                </svg>
+              </span>
+              19 Jan 2024
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <img src="images/blog3.jpg" alt="" class="rounded-xl" />
+          <h3 class="text-xl font-bold">Migrating to new technology</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="flex items-center gap-2">
+            <img class="h-9 w-9" src="images/profile.png" alt="" />
+            <p class="font-bold flex items-center gap-2">
+              Jonathan Wills
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="black"
+                  class="h-2 w-2 rounded-full"
+                >
+                  <circle cx="8" cy="8" r="12" />
+                </svg>
+              </span>
+              19 Jan 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-24">
+      <div class="pb-11 p-6 lg:px-12">
+        <div
+          class="footerdiv wezboxShadow rounded-3xl p-7 lg:p-11 lg:w-[100%] bg-[white]"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-[30%_10%_16%_10%_20%] gap-10 mb-6"
+          >
+            <div class="">
+              <img src="./images/wez-logo.png" alt="" class="mb-6" />
+
+              <p class="mb-4 font-light text-slate-500 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae at Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae
+              </p>
+
+              <button
+                class="border-2 border-[#FF1616] rounded-md p-5 py-2 text-secondary"
+              >
+                Enroll now
+              </button>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+                Links
+              </p>
+
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="about.html">About us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="contact.html">Contact us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  <a href="blog.html">Blog</a>
+                </li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+                Courses
+              </p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">
+                  MERN Stack Development
+                </li>
+                <li class="font-light text-slate-500 text-sm">
+                  Flutter App Development
+                </li>
+                <li class="font-light text-slate-500 text-sm">UI UX Design</li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-16 hidden lg:block"
+              ></p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm">
+                  Digital Marketing
+                </li>
+                <li class="font-light text-slate-500 text-sm">Python</li>
+                <li class="font-light text-slate-500 text-sm">DevOps</li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9">
+                Contact us
+              </p>
+              <ol class="space-y-1">
+                <li class="flex gap-2">
+                  <img src="./images/call.png" alt="" />
+                  <p class="font-light text-slate-500">+91 8138830876</p>
+                </li>
+                <li class="flex gap-2">
+                  <img src="./images/message.png" alt="" />
+                  <p class="font-light text-slate-500 text-sm">
+                    info@wezlon.com
+                  </p>
+                </li>
+                <li class="flex gap-2">
+                  <img
+                    src="./images/location.png"
+                    alt=""
+                    class="h-[35px] w-[35px]"
+                  />
+                  <p class="font-light text-slate-500 text-sm">
+                    4th Floor <br />
+                    Hi-Lite Business Park <br />
+                    Hi-Lite Business Park
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div
+            class="wezgrade p-2 lg:p-4 lg:flex justify-between items-center rounded-xl"
+          >
+            <p class="text-[white] rounded-lg text-center mb-1 lg:mb-0">
+              Copyright@2024 Wezlon
+            </p>
+
+            <div class="flex flex-row justify-center gap-1">
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/fb.png"
+                alt=""
+              />
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/insta.png"
+                alt=""
+              />
+              <img
+                class="btn-floating m-1 w-[35px] h-[35px]"
+                src="./images/location-icon.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
