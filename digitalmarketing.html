@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wezlon | Blog</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7C0A0A",
+              secondary: "#FF1616",
+              paraColor: "#000000",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header
+      class="py-4 px-2 shadow-[rgba(0,0,5,0.2)_0px_4px_20px_0px] fixed bg-[white] w-full z-10"
+    >
+      <!-- Mobile Navigation -->
+      <div class="flex justify-between lg:hidden">
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="./images/wez-logo.png"
+            alt=""
+            width="185"
+          />
+        </div>
+
+        <div class="flex gap-3">
+          <button class="bg-secondary rounded-md px-2 text-white text-sm">
+            Enroll now
+          </button>
+          <div class="menu-btn-1" onclick="menuBtnFunction(this)">
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-nav"
+        class="mobile-nav absolute right-0 bottom-0 h-full top-[64px] w-[265px]"
+        style="height: calc(100vh - 64px)"
+        hidden
+      >
+        <nav
+          class="bg-secondary h-full shadow-[rgba(51,10,10,1)_-8px_0px_29px_-10px]"
+        >
+          <ol class="flex direction flex-col gap-3 pt-4">
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="font-extrabold text-[34px] text-[white] px-4" href="/"
+                >Courses</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/blog.html"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-extrabold text-[34px] text-[white] px-4"
+                href="/contact.html"
+                >Contact Us</a
+              >
+            </li>
+          </ol>
+
+          <div
+            class="flex flex-row-reverse absolute bottom-0 right-0 p-3 gap-2"
+          >
+            <img class="btn-floating m-1" src="./images/fb.png" alt="" />
+            <img class="btn-floating m-1" src="./images/insta.png" alt="" />
+            <img src="./images/linkedin.png" alt="" />
+          </div>
+        </nav>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="lg:flex items-center justify-center gap-36 xl:gap-48 hidden">
+        <div>
+          <img src="./images/wez-logo.png" alt="" class="w-40" />
+        </div>
+        <nav>
+          <ol class="flex gap-10">
+            <a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Home</li> </a
+            ><a class="navHover" href="/">
+              <li class="font-bold hover:text-secondary">Cources</li> </a
+            ><a class="navHover" href="/blog.html">
+              <li class="font-bold hover:text-secondary">Blog</li> </a
+            ><a class="navHover" href="/about.html">
+              <li class="font-bold hover:text-secondary">About</li> </a
+            ><a class="navHover" href="/contact.html">
+              <li class="font-bold hover:text-secondary">Contact Us</li>
+            </a>
+          </ol>
+        </nav>
+        <button class="wezgrade text-[white] p-3 px-6 rounded-lg text-sm">
+          Enroll now
+        </button>
+      </div>
+    </header>
+
+    <div class="h-24"></div>
+
+    <!-- <section class="p-3 md:p-10 h-[750px] pt-[98px]">
+      <div
+        class="h-3/4 bg-cover bg-no-repeat rounded-2xl p-14 flex items-end mb-5"
+        style="background-image: url(./images/mernCoverPhoto.jpg)"
+      >
+        <div class="w-full">
+          <h1 class="text-white text-lg">Featured</h1>
+          <div class="flex justify-between items-center">
+            <div>
+              <h2 class="text-white text-5xl font-bold">
+                MERN Stack Development
+              </h2>
+              <h2 class="text-white text-5xl font-bold">Course overview</h2>
+            </div>
+            <button>
+              <img src="images/Vector.png" alt="" class="h-11" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2
+          class="text-4xl text-center lg:text-left lg:text-4xl font-extrabold mb-5"
+        >
+          Overview
+        </h2>
+        <p class="text-slate-500 text-xl">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula suscipit
+          aliquet. Nullam a orci non lorem faucibus venenatis. Suspendisse
+          potenti, et viverra est condimentum. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+          Curabitur vitae arcu id ligula suscipit aliquet. Nullam a orci non
+          lorem faucibus venenatis. Suspendisse potenti, et viverra est
+          condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vivamus lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula
+          suscipit aliquet. Nullam a orci non lorem faucibus venenatis.
+          Suspendisse potenti, et viverra est condimentum. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
+          vestibulum. Curabitur vitae arcu id ligula suscipit aliquet. Nullam a
+          orci non lorem faucibus venenatis. Suspendisse potenti, et viverra est
+          condimentum.
+        </p>
+      </div>
+    </section> -->
+
+    <section class="p-3 md:p-10 md:px-28 ">
+      <div
+        class="h-[720px] bg-cover bg-no-repeat rounded-2xl p-14 flex items-end mb-5"
+        style="background-image: url(./images/mernCoverPhoto.jpg)"
+      ></div>
+      <div>
+        <h2
+          class="text-4xl text-center lg:text-left lg:text-4xl font-extrabold mb-5"
+        >
+          Overview
+        </h2>
+        <p class="text-slate-500 text-xl">
+            Digital marketing involves promoting products, services, or brands through online channels, leveraging the internet and digital technologies to connect with consumers. With people spending more time online, digital marketing has become essential for businesses to reach and engage target audiences effectively. This overview provides a look into digital marketing’s role in expanding reach, building brand awareness, driving sales, and fostering customer loyalty.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-16 px-28">
+      <h1
+        class="text-4xl text-center lg:text-left lg:text-4xl font-extrabold mb-5"
+      >
+        The <span class="text-secondary"> Steps</span> to Fueling Your Future
+      </h1>
+      <div class="flex">
+        <div class="w-3/4">
+          <div class="flex gap-8 mb-6">
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="num wezgrade h-32 w-32 rounded-xl flex justify-center items-center shadow-[#00000040_0px_6.27px_6.27px_1.57px]"
+              >
+                <span class="text-5xl font-extrabold text-white">1</span>
+              </div>
+              <svg
+                width="24"
+                height="116"
+                viewBox="0 0 24 116"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 115.286L23.547 95.2856L0.452998 95.2856L12 115.286ZM10 0.285645L10 97.2856L14 97.2856L14 0.285644L10 0.285645Z"
+                  fill="url(#paint0_linear_814_457)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_814_457"
+                    x1="11.4798"
+                    y1="0.285645"
+                    x2="11.4798"
+                    y2="397.286"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FF1616" />
+                    <stop offset="1" stop-color="#7C0A0A" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Step 1 : SEO (Search Engine Optimization)</h3>
+              <p class="text-slate-500 text-xl">
+                Optimizes website content to rank higher on search engines, increasing organic visibility and driving traffic.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-8">
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="num bg-white h-32 w-32 rounded-xl flex justify-center items-center shadow-[#00000040_0px_6.27px_6.27px_1.57px]"
+              >
+                <span class="text-5xl font-extrabold text-black">2</span>
+              </div>
+              <svg
+                width="24"
+                height="116"
+                viewBox="0 0 24 116"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.3"
+                  d="M12 115.286L23.547 95.2856L0.452998 95.2856L12 115.286ZM10 0.285645L10 97.2856L14 97.2856L14 0.285644L10 0.285645Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Step 2 : Social Media Marketing</h3>
+              <p class="text-slate-500 text-xl">
+                Engages audiences on platforms like Facebook, Instagram, Twitter, and LinkedIn to build community and brand awareness.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center justify-center w-[24%]">
+          <img src="./images/lines.png" alt="arrowPaper" />
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16 px-28">
+      <h1 class="text-3xl font-bold mb-4">Roadmap</h1>
+      <p class="text-slate-500 text-xl">
+        The digital marketing roadmap begins with learning foundational concepts and understanding key channels. This knowledge sets the stage for setting clear, measurable goals and defining Key Performance Indicators (KPIs) to track progress and assess campaign success. Central to digital marketing are core channels—SEO, social media, content marketing, email, and PPC advertising—each playing a unique role in building brand awareness, driving engagement, and generating conversions.
+      </p>
+    </section>
+
+    <section class="p-3 border-spacing-0 z-20 rounded-3xl w-[930px] mx-auto">
+      <div class="flex gap-7 p-1">
+        <div
+          class="bg-[#F2F4F8] py-5 px-3 rounded-md w-1/2 flex flex-col gap-8"
+        >
+          <img
+            class="h-7 inline-block w-40"
+            src="./images/wez-logo.png"
+            alt=""
+          />
+          <h4 class="text-2xl font-semibold">
+            Help us get you started in a new beginning in your career
+          </h4>
+          <p class="text-slate-500 text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula
+            suscipit aliquet.
+          </p>
+
+          <div>
+            <div class="bg-white rounded-md px-4 py-6 pt-8 mb-4 relative">
+              <p class="text-md mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                lacinia odio vitae vestibulum. Curabitur vitae arcu id ligula
+                suscipit aliquet.
+              </p>
+              <div class="flex gap-3">
+                <img src="./images/profile.png" alt="" class="h-12" />
+                <div>
+                  <p class="text-md font-semibold">Angel John</p>
+                  <p class="text-sm">MERN Stack Developer</p>
+                </div>
+              </div>
+              <img
+                class="h-14 absolute top-0 left-2"
+                src="./images/coma2.png"
+                alt=""
+              />
+              <img
+                class="h-14 absolute bottom-12 right-4"
+                src="images/coma1.png"
+                alt=""
+              />
+            </div>
+
+            <div class="flex justify-center gap-2">
+              <div class="h-3 w-3 bg-secondary rounded-full"></div>
+              <div class="h-3 w-3 bg-slate-300 rounded-full"></div>
+              <div class="h-3 w-3 bg-slate-300 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/2 py-5 pr-5">
+          <!-- <div class="flex justify-end">
+            <button onclick="closeDialog()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div> -->
+          <h4 class="text-2xl font-semibold">Get started</h4>
+          <p class="text-slate-500 mb-5">
+            Fill the following details and we will reach you.
+          </p>
+
+          <form action="" class="flex flex-col gap-3">
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600"> Name </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600"> Email </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600">
+                Phone Number
+              </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+            <div class="w-full">
+              <label class="block mb-2 text-sm text-slate-600"> Course </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                placeholder="Type here..."
+              />
+            </div>
+
+            <button
+              class="text-white font-medium w-full py-3 rounded-lg wezgrade"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-24">
+      <div class="pb-11 p-6 lg:px-12">
+        <div
+          class="footerdiv wezboxShadow rounded-3xl p-7 lg:p-11 lg:w-[100%] bg-[white]"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-[30%_10%_16%_10%_20%] gap-10 mb-6"
+          >
+            <div class="">
+              <img src="./images/wez-logo.png" alt="" class="mb-6" />
+
+              <p class="mb-4 font-light text-slate-500 text-sm lg:text-lg">
+                Wezlon IT Job Training Academy in Kerala offers urgent,
+                industry-focused training programs designed to equip individuals
+                with the skills required for immediate job placement in the IT
+                sector.
+              </p>
+
+              <button
+                class="border-2 border-[#FF1616] rounded-md p-5 py-2 text-secondary lg:text-lg"
+                onclick="openDialog()"
+              >
+                Enroll now
+              </button>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
+                Links
+              </p>
+
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  <a href="about.html">About us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  <a href="contact.html">Contact us</a>
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  <a href="blog.html">Blog</a>
+                </li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
+                Courses
+              </p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  MERN Stack Development
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  Flutter App Development
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  UI UX Design
+                </li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-16 hidden lg:block"
+              ></p>
+              <ol class="space-y-1">
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  Digital Marketing
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  Python
+                </li>
+                <li class="font-light text-slate-500 text-sm lg:text-lg">
+                  DevOps
+                </li>
+              </ol>
+            </div>
+
+            <div class="">
+              <p
+                class="text-[#1E1E1E] font-bold text-[18px] mb-3 lg:mb-9 lg:text-xl"
+              >
+                Contact us
+              </p>
+              <ol class="space-y-1">
+                <li class="flex gap-2">
+                  <img src="./images/call.png" alt="" />
+                  <p class="font-light text-slate-500 lg:text-lg">
+                    +91 8138830876
+                  </p>
+                </li>
+                <li class="flex gap-2">
+                  <img src="./images/message.png" alt="" />
+                  <p class="font-light text-slate-500 text-sm lg:text-lg">
+                    info@wezlon.com
+                  </p>
+                </li>
+                <li class="flex gap-2">
+                  <img
+                    src="./images/location.png"
+                    alt=""
+                    class="h-[35px] w-[35px]"
+                  />
+                  <p class="font-light text-slate-500 text-sm lg:text-lg">
+                    4th Floor <br />
+                    Hi-Lite Business Park <br />
+                    Hi-Lite Business Park
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div
+            class="wezgrade p-2 lg:p-4 lg:flex justify-between items-center rounded-xl"
+          >
+            <p
+              class="text-[white] rounded-lg text-center mb-1 lg:mb-0 lg:text-lg"
+            >
+              Copyright@2024 Wezlon
+            </p>
+
+            <div class="flex flex-row justify-center gap-1">
+              <a
+                href="https://www.facebook.com/p/Wezlon-61559121857661/?locale=it_IT"
+              >
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/fb.png"
+                  alt=""
+              /></a>
+              <a href="https://www.instagram.com/wezlon_/">
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/insta.png"
+                  alt=""
+              /></a>
+              <a
+                href="https://www.linkedin.com/company/wezlon/?originalSubdomain=in"
+              >
+                <img
+                  class="btn-floating m-1 w-[35px] h-[35px]"
+                  src="./images/location-icon.png"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
